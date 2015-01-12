@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfClase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Clase>
+    <Nombre>Guerrero</Nombre>
+    <ModAtributos>
+      <Fuerza>2</Fuerza>
+      <Destreza>-1</Destreza>
+      <Constitucion>-1</Constitucion>
+      <Inteligencia>0</Inteligencia>
+      <Sabiduria>0</Sabiduria>
+      <Carisma>0</Carisma>
+    </ModAtributos>
+    <ListaModHabilidades />
+  </Clase>
+  <Clase>
+    <Nombre>Chorro</Nombre>
+    <ModAtributos>
+      <Fuerza>0</Fuerza>
+      <Destreza>2</Destreza>
+      <Constitucion>2</Constitucion>
+      <Inteligencia>1</Inteligencia>
+      <Sabiduria>0</Sabiduria>
+      <Carisma>0</Carisma>
+    </ModAtributos>
+  </Clase>
+</ArrayOfClase>

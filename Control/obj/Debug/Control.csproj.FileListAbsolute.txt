@@ -1,0 +1,9 @@
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Control\bin\Debug\Control.dll
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Control\bin\Debug\Control.pdb
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Control\obj\Debug\Control.dll
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Control\obj\Debug\Control.pdb
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Control\bin\Debug\Dao.dll
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Control\bin\Debug\Modelos.dll
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Control\bin\Debug\Dao.pdb
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Control\bin\Debug\Modelos.pdb
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Control\obj\Debug\Control.csprojResolveAssemblyReference.cache

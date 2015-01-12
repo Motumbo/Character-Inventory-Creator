@@ -1,0 +1,19 @@
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character Inventory Administrator.csprojResolveAssemblyReference.cache
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character_Inventory_Administrator.Crear_Personaje.resources
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character_Inventory_Administrator.Inicio.resources
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character_Inventory_Administrator.Properties.Resources.resources
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character Inventory Administrator.csproj.GenerateResource.Cache
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\bin\Debug\Character Inventory Administrator.exe
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\bin\Debug\Character Inventory Administrator.pdb
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\bin\Debug\Control.dll
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\bin\Debug\Dao.dll
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\bin\Debug\Modelos.dll
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\bin\Debug\Control.pdb
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\bin\Debug\Dao.pdb
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\bin\Debug\Modelos.pdb
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character Inventory Administrator.exe
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character Inventory Administrator.pdb
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character_Inventory_Administrator.Crear_Clase.resources
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character_Inventory_Administrator.Crear_Raza.resources
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\bin\Debug\Character Inventory Administrator.exe.config
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character_Inventory_Administrator.Crear_Habilidad.resources

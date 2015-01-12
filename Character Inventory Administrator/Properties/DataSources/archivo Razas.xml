@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Razas>
+  <Raza>
+    <Nombre>Humano</Nombre>
+    <ModAtributos>
+      <Fuerza>1</Fuerza>
+    </ModAtributos>
+    <ModHabilidades>
+
+    </ModHabilidades>
+  </Raza>
+</Razas>

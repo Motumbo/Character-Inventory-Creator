@@ -1,0 +1,10 @@
+- Implementar editor de personaje
+- Crear hoja de personaje (heredar de editor de personaje?)
+- Crear editor de items
+- Habilidades de los items
+- Diseñar sistema de inventario
+	- Equipamiento del personaje
+	- Como acarrear items
+
+	- "mochila" "stash"
+

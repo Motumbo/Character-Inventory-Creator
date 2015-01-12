@@ -1,0 +1,4 @@
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Modelos\bin\Debug\Modelos.dll
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Modelos\bin\Debug\Modelos.pdb
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Modelos\obj\Debug\Modelos.dll
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Modelos\obj\Debug\Modelos.pdb
