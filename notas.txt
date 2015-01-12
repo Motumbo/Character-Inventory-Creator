@@ -8,3 +8,4 @@
 
 	- "mochila" "stash"
 
+- Evitar el Crap
