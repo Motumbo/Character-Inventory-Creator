@@ -105,8 +105,6 @@ namespace Character_Inventory_Administrator
             nuevoCharacter.Raza = _razaCreacion;
             nuevoCharacter.Clase = _claseCreacion;
 
-            ma
-
             this.Close();
         }
 
