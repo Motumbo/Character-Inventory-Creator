@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.selectFuerza = new System.Windows.Forms.NumericUpDown();
             this.selectCarisma = new System.Windows.Forms.NumericUpDown();
             this.selectSabiduria = new System.Windows.Forms.NumericUpDown();
@@ -44,13 +45,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCargarClase = new System.Windows.Forms.Button();
             this.listBoxClases = new System.Windows.Forms.ListBox();
-            this.checkedListBoxHabilidades = new System.Windows.Forms.CheckedListBox();
+            this.dataGridViewHabilidades = new System.Windows.Forms.DataGridView();
+            this.habilidadesSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Pertenece = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.nombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.atributoClaveColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.selectFuerza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectCarisma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectSabiduria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectInteligencia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectDestreza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectConstitucion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHabilidades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.habilidadesSource)).BeginInit();
             this.SuspendLayout();
             // 
             // selectFuerza
@@ -203,9 +210,9 @@
             // 
             // btnCargarClase
             // 
-            this.btnCargarClase.Location = new System.Drawing.Point(176, 412);
+            this.btnCargarClase.Location = new System.Drawing.Point(328, 433);
             this.btnCargarClase.Name = "btnCargarClase";
-            this.btnCargarClase.Size = new System.Drawing.Size(96, 23);
+            this.btnCargarClase.Size = new System.Drawing.Size(96, 56);
             this.btnCargarClase.TabIndex = 59;
             this.btnCargarClase.Text = "Guardar Clase";
             this.btnCargarClase.UseVisualStyleBackColor = true;
@@ -219,20 +226,47 @@
             this.listBoxClases.Size = new System.Drawing.Size(120, 134);
             this.listBoxClases.TabIndex = 74;
             // 
-            // checkedListBoxHabilidades
+            // dataGridViewHabilidades
             // 
-            this.checkedListBoxHabilidades.FormattingEnabled = true;
-            this.checkedListBoxHabilidades.Location = new System.Drawing.Point(12, 225);
-            this.checkedListBoxHabilidades.Name = "checkedListBoxHabilidades";
-            this.checkedListBoxHabilidades.Size = new System.Drawing.Size(260, 169);
-            this.checkedListBoxHabilidades.TabIndex = 75;
+            this.dataGridViewHabilidades.AllowUserToAddRows = false;
+            this.dataGridViewHabilidades.AllowUserToDeleteRows = false;
+            this.dataGridViewHabilidades.AutoGenerateColumns = false;
+            this.dataGridViewHabilidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHabilidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Pertenece,
+            this.nombreColumn,
+            this.atributoClaveColumn});
+            this.dataGridViewHabilidades.DataSource = this.habilidadesSource;
+            this.dataGridViewHabilidades.Location = new System.Drawing.Point(14, 223);
+            this.dataGridViewHabilidades.Name = "dataGridViewHabilidades";
+            this.dataGridViewHabilidades.RowHeadersVisible = false;
+            this.dataGridViewHabilidades.Size = new System.Drawing.Size(294, 237);
+            this.dataGridViewHabilidades.TabIndex = 79;
+            // 
+            // Pertenece
+            // 
+            this.Pertenece.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Pertenece.HeaderText = "Pertenece";
+            this.Pertenece.Name = "Pertenece";
+            this.Pertenece.Width = 62;
+            // 
+            // nombreColumn
+            // 
+            this.nombreColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreColumn.HeaderText = "Nombre";
+            this.nombreColumn.Name = "nombreColumn";
+            // 
+            // atributoClaveColumn
+            // 
+            this.atributoClaveColumn.HeaderText = "Atributo Clave";
+            this.atributoClaveColumn.Name = "atributoClaveColumn";
             // 
             // Crear_Clase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 447);
-            this.Controls.Add(this.checkedListBoxHabilidades);
+            this.ClientSize = new System.Drawing.Size(436, 501);
+            this.Controls.Add(this.dataGridViewHabilidades);
             this.Controls.Add(this.listBoxClases);
             this.Controls.Add(this.selectFuerza);
             this.Controls.Add(this.selectCarisma);
@@ -257,6 +291,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.selectInteligencia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectDestreza)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectConstitucion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHabilidades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.habilidadesSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,6 +316,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCargarClase;
         private System.Windows.Forms.ListBox listBoxClases;
-        private System.Windows.Forms.CheckedListBox checkedListBoxHabilidades;
+        private System.Windows.Forms.DataGridView dataGridViewHabilidades;
+        private System.Windows.Forms.BindingSource habilidadesSource;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Pertenece;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn atributoClaveColumn;
     }
 }

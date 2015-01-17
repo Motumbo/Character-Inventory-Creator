@@ -10,8 +10,9 @@ namespace Modelos
         string nombre;
         string atributoClave;
         int rangos;
-        int modClave;
-        int modOtro;
+        
+        //int modClave;
+        //int modOtro;
 
         //int mod1;
         //int mod2;
@@ -31,24 +32,24 @@ namespace Modelos
             get { return rangos; }
             set { rangos = value; }
         }
-        public int ModClave
-        {
-            get { return modClave; }
-            set { modClave = value; }
-        }
-        public int ModOtro
-        {
-            get { return modOtro; }
-            set { modOtro = value; }
-        }
+        //public int ModClave
+        //{
+        //    get { return modClave; }
+        //    set { modClave = value; }
+        //}
+        //public int ModOtro
+        //{
+        //    get { return modOtro; }
+        //    set { modOtro = value; }
+        //}
 
         public Habilidad()
         {
             Nombre = "";
             AtributoClave = "";
             Rangos = 0;
-            ModClave = 0;
-            ModOtro = 0;
+            //ModClave = 0;
+            //ModOtro = 0;
         }
 
         public Habilidad(string _nombre, string _atributoClave)
@@ -56,8 +57,8 @@ namespace Modelos
             Nombre = _nombre;
             AtributoClave = _atributoClave;
             Rangos = 0;
-            ModClave = 0;
-            ModOtro = 0;
+            //ModClave = 0;
+            //ModOtro = 0;
         }
     }
 }

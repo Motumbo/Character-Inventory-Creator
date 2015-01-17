@@ -10,6 +10,7 @@ namespace Control
     public class CtrlHabilidades
     {
         DaoHabilidades datosHabilidades = new DaoHabilidades();
+        List<Habilidad> _listaHabilidades = new List<Habilidad>(); 
 
         public Habilidad AgregarHabilidad(Habilidad nuevaHabilidad)
         {
@@ -25,6 +26,19 @@ namespace Control
         public List<Habilidad> DameListaComp()
         {
             return datosHabilidades.DameAllHabilidades();
+        }
+
+        public Habilidad BuscarPorNombre(string nombre)
+        {
+            _listaHabilidades = datosHabilidades.DameAllHabilidades();
+            foreach (Habilidad habilidad in _listaHabilidades)
+            {
+                if (habilidad.Nombre == nombre)
+                {
+                    return habilidad;
+                }
+            }
+            return null;
         }
     }
 }

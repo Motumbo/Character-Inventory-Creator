@@ -10,6 +10,7 @@ namespace Control
     public class CtrlClases
     {
         DaoClases datosClases = new DaoClases();
+        List<Clase> _listaClases = new List<Clase>(); 
 
         public Clase AgregarClase(Clase nuevaClase)
         {
@@ -25,6 +26,19 @@ namespace Control
         public List<Clase> DameListaComp()
         {
             return datosClases.DameAllClases();
+        }
+
+        public Clase BuscarPorNombre(string nombre)
+        {
+            _listaClases = datosClases.DameAllClases();
+            foreach (Clase clase in _listaClases)
+            {
+                if (clase.Nombre == nombre)
+                {
+                    return clase;
+                }
+            }
+            return null;
         }
     }
 }

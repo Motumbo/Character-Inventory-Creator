@@ -4,133 +4,100 @@
     <Nombre>Avistar</Nombre>
     <AtributoClave>Sabiduria</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Averiguar intenciones</Nombre>
     <AtributoClave>Sabiduria</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Buscar</Nombre>
     <AtributoClave>Inteligencia</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Concentración</Nombre>
     <AtributoClave>Constitucion</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Conducir</Nombre>
     <AtributoClave>Destreza</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Curar heridas</Nombre>
     <AtributoClave>Sabiduria</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Demoliciones</Nombre>
     <AtributoClave>Inteligencia</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Descifrar escritura</Nombre>
     <AtributoClave>Inteligencia</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Descubrir</Nombre>
     <AtributoClave>Inteligencia</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Diplomacia</Nombre>
     <AtributoClave>Carisma</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Disfrazarse</Nombre>
     <AtributoClave>Carisma</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Engañar</Nombre>
     <AtributoClave>Carisma</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Equilibrio</Nombre>
     <AtributoClave>Destreza</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Escapismo</Nombre>
     <AtributoClave>Destreza</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Esconderse</Nombre>
     <AtributoClave>Destreza</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Escuchar</Nombre>
     <AtributoClave>Sabiduria</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Falsificar</Nombre>
     <AtributoClave>Inteligencia</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Informática</Nombre>
     <AtributoClave>Inteligencia</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
   </Habilidad>
   <Habilidad>
     <Nombre>Intimidar</Nombre>
     <AtributoClave>Carisma</AtributoClave>
     <Rangos>0</Rangos>
-    <ModClave>0</ModClave>
-    <ModOtro>0</ModOtro>
+  </Habilidad>
+  <Habilidad>
+    <Nombre>Culear</Nombre>
+    <AtributoClave>Destreza</AtributoClave>
+    <Rangos>0</Rangos>
   </Habilidad>
 </ArrayOfHabilidad>

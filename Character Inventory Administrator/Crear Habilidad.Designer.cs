@@ -42,7 +42,7 @@
             // 
             // btnCargarHabilidad
             // 
-            this.btnCargarHabilidad.Location = new System.Drawing.Point(280, 292);
+            this.btnCargarHabilidad.Location = new System.Drawing.Point(280, 31);
             this.btnCargarHabilidad.Name = "btnCargarHabilidad";
             this.btnCargarHabilidad.Size = new System.Drawing.Size(75, 43);
             this.btnCargarHabilidad.TabIndex = 0;
@@ -93,8 +93,6 @@
             // 
             // dataGridViewHabilidades
             // 
-            this.dataGridViewHabilidades.AllowUserToAddRows = false;
-            this.dataGridViewHabilidades.AllowUserToDeleteRows = false;
             this.dataGridViewHabilidades.AutoGenerateColumns = false;
             this.dataGridViewHabilidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHabilidades.DataSource = this.habilidadesSource;
@@ -102,7 +100,7 @@
             this.dataGridViewHabilidades.Name = "dataGridViewHabilidades";
             this.dataGridViewHabilidades.ReadOnly = true;
             this.dataGridViewHabilidades.RowHeadersVisible = false;
-            this.dataGridViewHabilidades.Size = new System.Drawing.Size(243, 237);
+            this.dataGridViewHabilidades.Size = new System.Drawing.Size(229, 237);
             this.dataGridViewHabilidades.TabIndex = 78;
             // 
             // Crear_Habilidad

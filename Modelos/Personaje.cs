@@ -8,7 +8,9 @@ namespace Modelos
     public class Personaje
     {
         string nombre;
+        string jugador;
         int nivel;
+        int vida;
         Raza raza;
         Clase clase;
         Atributos atributos;
@@ -29,10 +31,22 @@ namespace Modelos
             set { nombre = value; }
         }
 
+        public string Jugador
+        {
+            get { return jugador; }
+            set { jugador = value; }
+        }
+
         public int Nivel
         {
             get { return nivel; }
             set { nivel = value; }
+        }
+
+        public int Vida
+        {
+            get { return vida; }
+            set { vida = value; }
         }
 
         public Raza Raza
@@ -96,12 +110,16 @@ namespace Modelos
         }
 
 
+
         public Personaje()
         {
             Nombre = "";
-            Raza = null;
-            Clase = null;
-            Atributos = null;
+            Jugador = "";
+            Nivel = 0;
+            Vida = 0;
+            Raza = new Raza();
+            Clase = new Clase();
+            Atributos = new Atributos();
             Edad = "";
             Sexo = "";
             Altura = "";
@@ -110,10 +128,13 @@ namespace Modelos
             Pelo = "";
             Piel = "";
         }
-
-        public Personaje(string n, Raza r, string e, string s, string a, string p, string o, string pe, string pi)
+        
+        public Personaje(string n, string j, int lvl, int v, Raza r, string e, string s, string a, string p, string o, string pe, string pi)
         {
             Nombre = n;
+            Jugador = j;
+            Nivel = lvl;
+            Vida = v;
             Raza = r;
             Edad = e;
             Sexo = s;
@@ -123,6 +144,7 @@ namespace Modelos
             Pelo = pe;
             Piel = pi;
         }
+
         public int fuerza()
         {
             return Atributos.Fuerza + raza.ModAtributos.Fuerza + clase.ModAtributos.Fuerza;

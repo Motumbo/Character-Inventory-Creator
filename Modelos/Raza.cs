@@ -7,39 +7,40 @@ namespace Modelos
 {
     public class Raza
     {
-        string nombre;
-        Atributos modAtributos;
-        List<Habilidad> listaModHabilidades;
+        string _nombre;
+        Atributos _modAtributos;
+        List<Habilidad> _listaModHabilidades;
 
         public string Nombre
         {
-            get { return nombre; }
-            set { nombre = value; }
+            get { return _nombre; }
+            set { _nombre = value; }
         }
 
         public Atributos ModAtributos
         {
-            get { return modAtributos; }
-            set { modAtributos = value; }
+            get { return _modAtributos; }
+            set { _modAtributos = value; }
         }
 
-        public List<Habilidad> ListaModHabilidades
+        public List<Habilidad> ListaHabilidadesRaza
         {
-            get { return listaModHabilidades; }
-            set { listaModHabilidades = value; }
+            get { return _listaModHabilidades; }
+            set { _listaModHabilidades = value; }
         }
 
         public Raza()
         {
             Nombre = "";
-            ModAtributos = null;
-            ListaModHabilidades = null;
+            ModAtributos = new Atributos();
+            ListaHabilidadesRaza = new List<Habilidad>();
         }
 
         public Raza(string nombreRaza, Atributos atribRaza)
         {
             Nombre = nombreRaza;
             ModAtributos = atribRaza;
+            ListaHabilidadesRaza = null;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Modelos
     {
         string nombre;
         Atributos modAtributos;
-        List<Habilidad> listaModHabilidades;
+        List<Habilidad> listaHabilidadesClase;
 
         public string Nombre
         {
@@ -23,23 +23,24 @@ namespace Modelos
             set { modAtributos = value; }
         }
 
-        public List<Habilidad> ListaModHabilidades
+        public List<Habilidad> ListaHabilidadesClase
         {
-            get { return listaModHabilidades; }
-            set { listaModHabilidades = value; }
+            get { return listaHabilidadesClase; }
+            set { listaHabilidadesClase = value; }
         }
 
         public Clase()
         {
             Nombre = "";
-            ModAtributos = null;
-            ListaModHabilidades = null;
+            ModAtributos = new Atributos();
+            ListaHabilidadesClase = new List<Habilidad>();
         }
 
-        public Clase(string nombreClase, Atributos atribClase)
+        public Clase(string nombreClase, Atributos atribClase, List<Habilidad> listaHabilidades)
         {
             Nombre = nombreClase;
             ModAtributos = atribClase;
+            ListaHabilidadesClase = listaHabilidades;
         }
     }
 }
