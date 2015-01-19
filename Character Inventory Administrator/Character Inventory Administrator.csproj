@@ -48,53 +48,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Crear Clase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Crear Clase.Designer.cs">
-      <DependentUpon>Crear Clase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Crear Habilidad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Crear Habilidad.Designer.cs">
-      <DependentUpon>Crear Habilidad.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Crear Personaje.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Crear Personaje.Designer.cs">
-      <DependentUpon>Crear Personaje.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Crear Raza.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Crear Raza.Designer.cs">
-      <DependentUpon>Crear Raza.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inicio.Designer.cs">
-      <DependentUpon>Inicio.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Controlador\ClasesController.cs" />
+    <Compile Include="Controlador\HabilidadesController.cs" />
+    <Compile Include="Controlador\PersonajesController.cs" />
+    <Compile Include="Controlador\RazasController.cs" />
+    <Compile Include="Dao\AbstractSingletonDAO.cs" />
+    <Compile Include="Dao\ClasesDAO.cs" />
+    <Compile Include="Dao\HabilidadesDAO.cs" />
+    <Compile Include="Dao\PersonajesDAO.cs" />
+    <Compile Include="Dao\RazasDAO.cs" />
+    <Compile Include="Dao\Interface_DAO.cs" />
+    <Compile Include="Modelo\AtributosModel.cs" />
+    <Compile Include="Modelo\ClaseModel.cs" />
+    <Compile Include="Modelo\HabilidadModel.cs" />
+    <Compile Include="Modelo\ItemModel.cs" />
+    <Compile Include="Modelo\PersonajeModel.cs" />
+    <Compile Include="Modelo\RazaModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Crear Clase.resx">
-      <DependentUpon>Crear Clase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Crear Habilidad.resx">
-      <DependentUpon>Crear Habilidad.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Crear Personaje.resx">
-      <DependentUpon>Crear Personaje.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Crear Raza.resx">
-      <DependentUpon>Crear Raza.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inicio.resx">
+    <Compile Include="Vista\CrearClaseView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\CrearClaseView.Designer.cs">
+      <DependentUpon>CrearClaseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\CrearHabilidadView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\CrearHabilidadView.Designer.cs">
+      <DependentUpon>CrearHabilidadView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\CrearPersonajeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\CrearPersonajeView.Designer.cs">
+      <DependentUpon>CrearPersonajeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\CrearRazaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\CrearRazaView.Designer.cs">
+      <DependentUpon>CrearRazaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
-    </EmbeddedResource>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -104,7 +105,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="app.config" />
+    <EmbeddedResource Include="Vista\CrearClaseView.resx">
+      <DependentUpon>CrearClaseView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\CrearHabilidadView.resx">
+      <DependentUpon>CrearHabilidadView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\CrearPersonajeView.resx">
+      <DependentUpon>CrearPersonajeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\CrearRazaView.resx">
+      <DependentUpon>CrearRazaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -114,20 +129,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Control\Control.csproj">
-      <Project>{8B984BD0-00EE-4932-BE87-0B576340CDE8}</Project>
-      <Name>Control</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Dao\Dao.csproj">
-      <Project>{7E2C73B4-5554-406D-9BC2-FA5EB3CBB15C}</Project>
-      <Name>Dao</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Modelos\Modelos.csproj">
-      <Project>{55EABF1F-B036-4000-8E42-FC23FBBC0CF6}</Project>
-      <Name>Modelos</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\DataSources\archivo Razas.xml">

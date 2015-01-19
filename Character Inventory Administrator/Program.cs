@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
+using Character_Inventory_Administrator.Vista;
+
 
 namespace Character_Inventory_Administrator
 {
