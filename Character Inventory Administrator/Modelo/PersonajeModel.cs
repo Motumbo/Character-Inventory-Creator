@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Windows.Forms;
 using Character_Inventory_Administrator.Controlador;
 using Character_Inventory_Administrator.Vistas;
 
@@ -15,6 +16,7 @@ namespace Character_Inventory_Administrator.Modelo
         private RazaModel _razaModel;
         private ClaseModel _claseModel;
         private AtributosModel _atributosModel;
+        private List<HabilidadModel> _listHabilidadesModel;
 
         private string _edad;
         private string _sexo;
@@ -66,6 +68,12 @@ namespace Character_Inventory_Administrator.Modelo
         {
             get { return _atributosModel; }
             set { _atributosModel = value; }
+        }
+
+        public List<HabilidadModel> ListHabilidadesModel
+        {
+            get { return _listHabilidadesModel; }
+            set { _listHabilidadesModel = value; }
         }
 
         public string Edad

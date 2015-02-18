@@ -41,6 +41,7 @@ namespace Character_Inventory_Administrator.Vistas
         public CrearPersonajeView()
         {
             InitializeComponent();
+            NuevoPersonajeModel = new PersonajeModel();
             listaClases = _claseController.DameListaComp();
             listaRazas = _razaController.DameListaComp();
             listaHabilidades = _habilidadesController.DameListaComp();
@@ -258,26 +259,5 @@ namespace Character_Inventory_Administrator.Vistas
         {
             _personajeController.UpdateSexo(selectorSexo.SelectedItem.ToString());
         }
-
-
-
-        //private void SetModBoxValues()
-        //{
-        //    txtTotalFuerza.Text = Convert.ToString(Convert.ToInt16(txtModClaseFuerza.Text) + Convert.ToInt16(txtModRazaFuerza.Text) + selectFuerza.Value);
-        //    txtTotalDestreza.Text = Convert.ToString(Convert.ToInt16(txtModClaseDestreza.Text) + Convert.ToInt16(txtModRazaDestreza.Text) + selectDestreza.Value);
-        //    txtTotalConstitucion.Text = Convert.ToString(Convert.ToInt16(txtModClaseConstitucion.Text) + Convert.ToInt16(txtModRazaConstitucion.Text) + selectConstitucion.Value);
-        //    txtTotalInteligencia.Text = Convert.ToString(Convert.ToInt16(txtModClaseInteligencia.Text) + Convert.ToInt16(txtModRazaInteligencia.Text) + selectInteligencia.Value);
-        //    txtTotalSabiduria.Text = Convert.ToString(Convert.ToInt16(txtModClaseSabiduria.Text) + Convert.ToInt16(txtModRazaSabiduria.Text) + selectSabiduria.Value);
-        //    txtTotalCarisma.Text = Convert.ToString(Convert.ToInt16(txtModClaseCarisma.Text) + Convert.ToInt16(txtModRazaCarisma.Text) + selectCarisma.Value);
-        //    //Modificador mas usado y util, txtMod..
-        //    txtModFuerza.Text = Convert.ToString((int)(((Convert.ToInt16(txtTotalFuerza.Text)) - 10) / 2));
-        //    txtModDestreza.Text = Convert.ToString((int)(((Convert.ToInt16(txtTotalDestreza.Text)) - 10) / 2));
-        //    txtModConstitucion.Text = Convert.ToString((int)(((Convert.ToInt16(txtTotalConstitucion.Text)) - 10) / 2));
-        //    txtModInteligencia.Text = Convert.ToString((int)(((Convert.ToInt16(txtTotalInteligencia.Text)) - 10) / 2));
-        //    txtModSabiduria.Text = Convert.ToString((int)(((Convert.ToInt16(txtTotalSabiduria.Text)) - 10) / 2));
-        //    txtModCarisma.Text = Convert.ToString((int)(((Convert.ToInt16(txtTotalCarisma.Text)) - 10) / 2));
-
-        //}
-
     }
 }

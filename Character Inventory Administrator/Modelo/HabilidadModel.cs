@@ -55,5 +55,31 @@
             //ModClave = 0;
             //ModOtro = 0;
         }
+
+        //public GetModClave(string atributoClave)
+        //{
+        //    switch (atributoClave)
+        //        {
+        //            case "Fuerza":
+                        
+        //                break;
+        //            case "Destreza":
+                        
+        //                break;
+        //            case "Constitucion":
+                        
+        //                break;
+        //            case "Inteligencia":
+                        
+        //                break;
+        //            case "Sabiduria":
+                        
+        //                break;
+        //            case "Carisma":
+                        
+        //                break;
+        //        }
+            
+        //}
     }
 }
