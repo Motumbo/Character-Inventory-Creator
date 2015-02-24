@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using Character_Inventory_Administrator.Controlador;
 using Character_Inventory_Administrator.Modelo;
-using Character_Inventory_Administrator.Vistas;
 
 namespace Character_Inventory_Administrator.Vista
 {

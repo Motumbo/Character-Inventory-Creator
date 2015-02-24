@@ -32,7 +32,10 @@ namespace Character_Inventory_Administrator.Vista
             {
                 if ((row.Cells[0].Value) != null)
                 {
-                    listaHabilidadesClase.Add(_manejoHabilidadesController.BuscarPorNombre(row.Cells[nombreColumn.Name].Value.ToString()));
+                    HabilidadModel habilidad = new HabilidadModel();
+                    habilidad = _manejoHabilidadesController.BuscarPorNombre(row.Cells[nombreColumn.Name].Value.ToString());
+                    habilidad.DeClase = true;
+                    listaHabilidadesClase.Add(habilidad);
                 }
             }
 

@@ -4,6 +4,7 @@ namespace Character_Inventory_Administrator.Modelo
 {
     public class HabilidadModel
     {
+        private bool _deClase;
         private string _nombre;
         private string _atributoClave;
         private bool _normal;
@@ -14,7 +15,12 @@ namespace Character_Inventory_Administrator.Modelo
 
         //int mod1;
         //int mod2;
-        
+
+        public bool DeClase
+        {
+            get { return _deClase; }
+            set { _deClase = value; }
+        }
         public string Nombre
         {
             get { return _nombre; }
@@ -49,6 +55,7 @@ namespace Character_Inventory_Administrator.Modelo
 
         public HabilidadModel()
         {
+            DeClase = false;
             Nombre = "";
             AtributoClave = "";
             Normal = false;
@@ -59,6 +66,7 @@ namespace Character_Inventory_Administrator.Modelo
 
         public HabilidadModel(string nombre, string atributoClave, bool normal)
         {
+            DeClase = false;
             Nombre = nombre;
             AtributoClave = atributoClave;
             Normal = normal;

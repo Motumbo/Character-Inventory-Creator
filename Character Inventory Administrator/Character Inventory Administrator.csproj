@@ -131,6 +131,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Archivos\Habilidades Comunes.xml" />
     <Content Include="Properties\DataSources\archivo Razas.xml">
       <SubType>Designer</SubType>
     </Content>

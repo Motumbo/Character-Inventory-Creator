@@ -14,6 +14,7 @@ namespace Character_Inventory_Administrator.Vista
         public CrearHabilidadView()
         {
             InitializeComponent();
+            _listaHabilidades=_manejoHabilidadesController.DameListaComp();
             InicializarGridViewHabilidades();
         }
 
@@ -23,13 +24,11 @@ namespace Character_Inventory_Administrator.Vista
             _listaHabilidades.Add(nuevaHabilidadModel);
             _manejoHabilidadesController.AgregarListaHabilidades(_listaHabilidades);
             InicializarGridViewHabilidades();
-            //Close();
         }
         
         private void InicializarGridViewHabilidades()
         {
-            _listaHabilidades = _manejoHabilidadesController.DameListaComp();
-            habilidadesSource.DataSource = _listaHabilidades;
+            habilidadesSource.DataSource = _manejoHabilidadesController.DameListaComp();
             dataGridViewHabilidades.AutoGenerateColumns = false;
             nombreColumn.DataPropertyName = "Nombre";
             normalColumn.DataPropertyName = "Normal";

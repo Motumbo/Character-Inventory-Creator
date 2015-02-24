@@ -9,7 +9,7 @@ namespace Character_Inventory_Administrator.Dao
     {
         public List<HabilidadModel> AgregarArchivo(List<HabilidadModel> listaCompletadeHabilidades)
         {
-            TextWriter archivoEscritura = new StreamWriter(@"..\Habilidades Comunes.xml");
+            TextWriter archivoEscritura = new StreamWriter(@"..\..\Archivos\Habilidades Comunes.xml");
             XmlSerializer writer = new XmlSerializer(typeof(List<HabilidadModel>));
             writer.Serialize(archivoEscritura, listaCompletadeHabilidades);
             archivoEscritura.Close();
@@ -19,9 +19,9 @@ namespace Character_Inventory_Administrator.Dao
         public List<HabilidadModel> DameAll()
         {
             List<HabilidadModel> listaCompletadeHabilidades = new List<HabilidadModel>();
-            if (File.Exists(@"..\Habilidades Comunes.xml"))
+            if (File.Exists(@"..\..\Archivos\Habilidades Comunes.xml"))
             {
-                TextReader archivoLectura = new StreamReader(@"..\Habilidades Comunes.xml");
+                TextReader archivoLectura = new StreamReader(@"..\..\Archivos\Habilidades Comunes.xml");
                 XmlSerializer reader = new XmlSerializer(typeof(List<HabilidadModel>));
                 listaCompletadeHabilidades = (List<HabilidadModel>)reader.Deserialize(archivoLectura);
                 archivoLectura.Close();

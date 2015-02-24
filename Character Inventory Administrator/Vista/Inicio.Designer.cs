@@ -41,7 +41,7 @@
             this.btnCrearPersonaje.Name = "btnCrearPersonaje";
             this.btnCrearPersonaje.Size = new System.Drawing.Size(209, 23);
             this.btnCrearPersonaje.TabIndex = 0;
-            this.btnCrearPersonaje.Text = "Crear Nuevo PersonajeModel";
+            this.btnCrearPersonaje.Text = "Crear Nuevo Personaje";
             this.btnCrearPersonaje.UseVisualStyleBackColor = true;
             this.btnCrearPersonaje.Click += new System.EventHandler(this.btnCrear_Click);
             // 
@@ -60,7 +60,7 @@
             this.btnCrearRaza.Name = "btnCrearRaza";
             this.btnCrearRaza.Size = new System.Drawing.Size(209, 23);
             this.btnCrearRaza.TabIndex = 2;
-            this.btnCrearRaza.Text = "Crear Nueva RazaModel";
+            this.btnCrearRaza.Text = "Crear Nueva Raza";
             this.btnCrearRaza.UseVisualStyleBackColor = true;
             this.btnCrearRaza.Click += new System.EventHandler(this.btnCrearRaza_Click);
             // 
@@ -70,7 +70,7 @@
             this.btnCrearClase.Name = "btnCrearClase";
             this.btnCrearClase.Size = new System.Drawing.Size(209, 23);
             this.btnCrearClase.TabIndex = 3;
-            this.btnCrearClase.Text = "Crear Nueva ClaseModel";
+            this.btnCrearClase.Text = "Crear Nueva Clase";
             this.btnCrearClase.UseVisualStyleBackColor = true;
             this.btnCrearClase.Click += new System.EventHandler(this.btnCrearClase_Click);
             // 
@@ -80,7 +80,7 @@
             this.btnCrearHabilidad.Name = "btnCrearHabilidad";
             this.btnCrearHabilidad.Size = new System.Drawing.Size(209, 23);
             this.btnCrearHabilidad.TabIndex = 4;
-            this.btnCrearHabilidad.Text = "Crear Nueva HabilidadModel";
+            this.btnCrearHabilidad.Text = "Crear Nueva Habilidad";
             this.btnCrearHabilidad.UseVisualStyleBackColor = true;
             this.btnCrearHabilidad.Click += new System.EventHandler(this.btnCrearHabilidad_Click);
             // 

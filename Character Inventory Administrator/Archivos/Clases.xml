@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfClaseModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ClaseModel>
+    <Nombre>Mago</Nombre>
+    <ModAtributosModel>
+      <Fuerza>-2</Fuerza>
+      <Destreza>0</Destreza>
+      <Constitucion>0</Constitucion>
+      <Inteligencia>4</Inteligencia>
+      <Sabiduria>3</Sabiduria>
+      <Carisma>1</Carisma>
+    </ModAtributosModel>
+    <ListaHabilidadesClase>
+      <HabilidadModel>
+        <DeClase>true</DeClase>
+        <Nombre>Averiguar Intenciones</Nombre>
+        <AtributoClave>Sabiduria</AtributoClave>
+        <Normal>true</Normal>
+        <Rangos>0</Rangos>
+      </HabilidadModel>
+      <HabilidadModel>
+        <DeClase>true</DeClase>
+        <Nombre>Avistar</Nombre>
+        <AtributoClave>Sabiduria</AtributoClave>
+        <Normal>true</Normal>
+        <Rangos>0</Rangos>
+      </HabilidadModel>
+      <HabilidadModel>
+        <DeClase>true</DeClase>
+        <Nombre>Buscar</Nombre>
+        <AtributoClave>Inteligencia</AtributoClave>
+        <Normal>true</Normal>
+        <Rangos>0</Rangos>
+      </HabilidadModel>
+      <HabilidadModel>
+        <DeClase>true</DeClase>
+        <Nombre>Conocimiento de Conjuros</Nombre>
+        <AtributoClave>Inteligencia</AtributoClave>
+        <Normal>false</Normal>
+        <Rangos>0</Rangos>
+      </HabilidadModel>
+    </ListaHabilidadesClase>
+  </ClaseModel>
+</ArrayOfClaseModel>

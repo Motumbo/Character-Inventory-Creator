@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfHabilidadModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HabilidadModel>
+    <DeClase>false</DeClase>
+    <Nombre>Abrir Cerraduras</Nombre>
+    <AtributoClave>Destreza</AtributoClave>
+    <Normal>false</Normal>
+    <Rangos>0</Rangos>
+  </HabilidadModel>
+  <HabilidadModel>
+    <DeClase>false</DeClase>
+    <Nombre>Averiguar Intenciones</Nombre>
+    <AtributoClave>Sabiduria</AtributoClave>
+    <Normal>false</Normal>
+    <Rangos>0</Rangos>
+  </HabilidadModel>
+  <HabilidadModel>
+    <DeClase>false</DeClase>
+    <Nombre>Avistar</Nombre>
+    <AtributoClave>Sabiduria</AtributoClave>
+    <Normal>true</Normal>
+    <Rangos>0</Rangos>
+  </HabilidadModel>
+</ArrayOfHabilidadModel>

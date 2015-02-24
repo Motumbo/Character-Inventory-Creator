@@ -9,7 +9,7 @@ namespace Character_Inventory_Administrator.Dao
     {
         public List<ClaseModel> AgregarArchivo(List<ClaseModel> listaCompletadeClases)
         {
-            TextWriter archivoEscritura = new StreamWriter(@"..\Clases.xml");
+            TextWriter archivoEscritura = new StreamWriter(@"..\..\Archivos\Clases.xml");
             XmlSerializer writer = new XmlSerializer(typeof(List<ClaseModel>));
             writer.Serialize(archivoEscritura, listaCompletadeClases);
             archivoEscritura.Close();
@@ -19,9 +19,9 @@ namespace Character_Inventory_Administrator.Dao
         public List<ClaseModel> DameAll()
         {
             List<ClaseModel> listaCompletadeClases = new List<ClaseModel>();
-            if (File.Exists(@"..\Clases.xml"))
+            if (File.Exists(@"..\..\Archivos\Clases.xml"))
             {
-                TextReader archivoLectura = new StreamReader(@"..\Clases.xml");
+                TextReader archivoLectura = new StreamReader(@"..\..\Archivos\Clases.xml");
                 XmlSerializer reader = new XmlSerializer(typeof(List<ClaseModel>));
                 listaCompletadeClases = (List<ClaseModel>)reader.Deserialize(archivoLectura);
                 archivoLectura.Close();

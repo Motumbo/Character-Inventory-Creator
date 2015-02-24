@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Character_Inventory_Administrator.Dao;
 using Character_Inventory_Administrator.Modelo;
-using Character_Inventory_Administrator.Vistas;
 
 namespace Character_Inventory_Administrator.Controlador
 {
@@ -63,11 +62,6 @@ namespace Character_Inventory_Administrator.Controlador
                 }
             }
             return null;
-        }
-
-        public void UpdateSexo(string sexo)
-        {
-            _personajeModel.Sexo = sexo;
         }
     }
 }

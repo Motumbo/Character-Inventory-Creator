@@ -9,7 +9,7 @@ namespace Character_Inventory_Administrator.Dao
     {
         public List<PersonajeModel> AgregarArchivo(List<PersonajeModel> listaCompletadePersonajes)
         {
-            TextWriter archivoEscritura = new StreamWriter(@"..\Personajes.xml");
+            TextWriter archivoEscritura = new StreamWriter(@"..\..\Archivos\Personajes.xml");
             XmlSerializer writer = new XmlSerializer(typeof(List<PersonajeModel>));
             writer.Serialize(archivoEscritura, listaCompletadePersonajes);
             archivoEscritura.Close();
@@ -19,9 +19,9 @@ namespace Character_Inventory_Administrator.Dao
         public List<PersonajeModel> DameAll()
         {
             List<PersonajeModel> listaCompletadePersonajes = new List<PersonajeModel>();
-            if (File.Exists(@"..\Personajes.xml"))
+            if (File.Exists(@"..\..\Archivos\Personajes.xml"))
             {
-                TextReader archivoLectura = new StreamReader(@"..\Personajes.xml");
+                TextReader archivoLectura = new StreamReader(@"..\..\Archivos\Personajes.xml");
                 XmlSerializer reader = new XmlSerializer(typeof(List<PersonajeModel>));
                 listaCompletadePersonajes = (List<PersonajeModel>)reader.Deserialize(archivoLectura);
                 archivoLectura.Close();

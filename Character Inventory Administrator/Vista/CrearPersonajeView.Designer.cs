@@ -1,4 +1,4 @@
-﻿namespace Character_Inventory_Administrator.Vistas
+﻿namespace Character_Inventory_Administrator.Vista
 {
     partial class CrearPersonajeView
     {
@@ -96,12 +96,6 @@
             this.txtTotalDestreza = new System.Windows.Forms.TextBox();
             this.txtTotalFuerza = new System.Windows.Forms.TextBox();
             this.dataGridViewHabilidades = new System.Windows.Forms.DataGridView();
-            this.nombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.atributoClaveColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rangosColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modClaveColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modOtrosColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -114,6 +108,14 @@
             this.txtModDestreza = new System.Windows.Forms.TextBox();
             this.txtModFuerza = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.deClaseColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.nombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.normalColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.atributoClaveColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rangosColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modClaveColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modOtrosColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.razasSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clasesSource)).BeginInit();
@@ -356,7 +358,6 @@
             this.selectorSexo.Name = "selectorSexo";
             this.selectorSexo.Size = new System.Drawing.Size(87, 21);
             this.selectorSexo.TabIndex = 28;
-            this.selectorSexo.SelectionChangeCommitted += new System.EventHandler(this.selectorSexo_SelectionChangeCommitted);
             // 
             // selectorAltura
             // 
@@ -421,7 +422,7 @@
             // 
             // btnContCreacion
             // 
-            this.btnContCreacion.Location = new System.Drawing.Point(845, 478);
+            this.btnContCreacion.Location = new System.Drawing.Point(22, 643);
             this.btnContCreacion.Name = "btnContCreacion";
             this.btnContCreacion.Size = new System.Drawing.Size(113, 41);
             this.btnContCreacion.TabIndex = 31;
@@ -825,76 +826,21 @@
             this.dataGridViewHabilidades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridViewHabilidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHabilidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.deClaseColumn,
             this.nombreColumn,
+            this.normalColumn,
             this.atributoClaveColumn,
             this.totalColumn,
             this.rangosColumn,
             this.modClaveColumn,
             this.modOtrosColumn});
-            this.dataGridViewHabilidades.Location = new System.Drawing.Point(424, 225);
+            this.dataGridViewHabilidades.Location = new System.Drawing.Point(352, 225);
             this.dataGridViewHabilidades.Name = "dataGridViewHabilidades";
             this.dataGridViewHabilidades.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridViewHabilidades.RowHeadersVisible = false;
             this.dataGridViewHabilidades.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridViewHabilidades.Size = new System.Drawing.Size(534, 243);
+            this.dataGridViewHabilidades.Size = new System.Drawing.Size(606, 459);
             this.dataGridViewHabilidades.TabIndex = 65;
-            // 
-            // nombreColumn
-            // 
-            this.nombreColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreColumn.HeaderText = "Nombre";
-            this.nombreColumn.MinimumWidth = 2;
-            this.nombreColumn.Name = "nombreColumn";
-            // 
-            // atributoClaveColumn
-            // 
-            this.atributoClaveColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle1.NullValue = "0";
-            this.atributoClaveColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.atributoClaveColumn.HeaderText = "Atributo Clave";
-            this.atributoClaveColumn.MinimumWidth = 2;
-            this.atributoClaveColumn.Name = "atributoClaveColumn";
-            this.atributoClaveColumn.Width = 98;
-            // 
-            // totalColumn
-            // 
-            this.totalColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle2.NullValue = "0";
-            this.totalColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.totalColumn.HeaderText = "Total";
-            this.totalColumn.MinimumWidth = 2;
-            this.totalColumn.Name = "totalColumn";
-            this.totalColumn.Width = 56;
-            // 
-            // rangosColumn
-            // 
-            this.rangosColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle3.NullValue = "0";
-            this.rangosColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.rangosColumn.HeaderText = "Rangos";
-            this.rangosColumn.MinimumWidth = 2;
-            this.rangosColumn.Name = "rangosColumn";
-            this.rangosColumn.Width = 69;
-            // 
-            // modClaveColumn
-            // 
-            this.modClaveColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle4.NullValue = "0";
-            this.modClaveColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.modClaveColumn.HeaderText = "Mod Clave";
-            this.modClaveColumn.MinimumWidth = 2;
-            this.modClaveColumn.Name = "modClaveColumn";
-            this.modClaveColumn.Width = 83;
-            // 
-            // modOtrosColumn
-            // 
-            this.modOtrosColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle5.NullValue = "0";
-            this.modOtrosColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.modOtrosColumn.HeaderText = "Mod Otros";
-            this.modOtrosColumn.MinimumWidth = 2;
-            this.modOtrosColumn.Name = "modOtrosColumn";
-            this.modOtrosColumn.Width = 81;
             // 
             // label21
             // 
@@ -1031,16 +977,95 @@
             this.panel1.Controls.Add(this.txtModClaseDestreza);
             this.panel1.Controls.Add(this.txtModClaseInteligencia);
             this.panel1.Controls.Add(this.txtModClaseConstitucion);
-            this.panel1.Location = new System.Drawing.Point(51, 225);
+            this.panel1.Location = new System.Drawing.Point(22, 225);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(324, 243);
             this.panel1.TabIndex = 76;
+            // 
+            // deClaseColumn
+            // 
+            this.deClaseColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.deClaseColumn.FalseValue = "false";
+            this.deClaseColumn.HeaderText = "De Clase";
+            this.deClaseColumn.Name = "deClaseColumn";
+            this.deClaseColumn.ReadOnly = true;
+            this.deClaseColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.deClaseColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.deClaseColumn.TrueValue = "true";
+            this.deClaseColumn.Width = 75;
+            // 
+            // nombreColumn
+            // 
+            this.nombreColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreColumn.HeaderText = "Nombre";
+            this.nombreColumn.MinimumWidth = 2;
+            this.nombreColumn.Name = "nombreColumn";
+            // 
+            // normalColumn
+            // 
+            this.normalColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.normalColumn.HeaderText = "Normal";
+            this.normalColumn.Name = "normalColumn";
+            this.normalColumn.ReadOnly = true;
+            this.normalColumn.Width = 46;
+            // 
+            // atributoClaveColumn
+            // 
+            this.atributoClaveColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle1.NullValue = "0";
+            this.atributoClaveColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.atributoClaveColumn.HeaderText = "Atributo Clave";
+            this.atributoClaveColumn.MinimumWidth = 2;
+            this.atributoClaveColumn.Name = "atributoClaveColumn";
+            this.atributoClaveColumn.Width = 98;
+            // 
+            // totalColumn
+            // 
+            this.totalColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.NullValue = "0";
+            this.totalColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.totalColumn.HeaderText = "Total";
+            this.totalColumn.MinimumWidth = 2;
+            this.totalColumn.Name = "totalColumn";
+            this.totalColumn.Width = 56;
+            // 
+            // rangosColumn
+            // 
+            this.rangosColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle3.NullValue = "0";
+            this.rangosColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.rangosColumn.HeaderText = "Rangos";
+            this.rangosColumn.MinimumWidth = 2;
+            this.rangosColumn.Name = "rangosColumn";
+            this.rangosColumn.Width = 69;
+            // 
+            // modClaveColumn
+            // 
+            this.modClaveColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle4.NullValue = "0";
+            this.modClaveColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.modClaveColumn.HeaderText = "Mod Clave";
+            this.modClaveColumn.MinimumWidth = 2;
+            this.modClaveColumn.Name = "modClaveColumn";
+            this.modClaveColumn.Width = 83;
+            // 
+            // modOtrosColumn
+            // 
+            this.modOtrosColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle5.NullValue = "0";
+            this.modOtrosColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.modOtrosColumn.HeaderText = "Mod Otros";
+            this.modOtrosColumn.MinimumWidth = 2;
+            this.modOtrosColumn.Name = "modOtrosColumn";
+            this.modOtrosColumn.Width = 81;
             // 
             // CrearPersonajeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 531);
+            this.ClientSize = new System.Drawing.Size(970, 696);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridViewHabilidades);
             this.Controls.Add(this.selectorVida);
@@ -1173,7 +1198,9 @@
         private System.Windows.Forms.TextBox txtModDestreza;
         private System.Windows.Forms.TextBox txtModFuerza;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn deClaseColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn normalColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn atributoClaveColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rangosColumn;
