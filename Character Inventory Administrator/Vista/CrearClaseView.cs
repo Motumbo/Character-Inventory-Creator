@@ -4,12 +4,12 @@ using System.Windows.Forms;
 using Character_Inventory_Administrator.Controlador;
 using Character_Inventory_Administrator.Modelo;
 
-namespace Character_Inventory_Administrator.Vistas
+namespace Character_Inventory_Administrator.Vista
 {
     public partial class CrearClaseView : Form
     {
         List<ClaseModel> listaClases = new List<ClaseModel>();
-        List<HabilidadModel> listaTodasHabilidades = new List<HabilidadModel>();
+        List<HabilidadModel> _listaTodasHabilidades = new List<HabilidadModel>();
         ClasesController _manejoClasesController = new ClasesController();
         HabilidadesController _manejoHabilidadesController = new HabilidadesController();
 
@@ -30,20 +30,17 @@ namespace Character_Inventory_Administrator.Vistas
             List<HabilidadModel> listaHabilidadesClase = new List<HabilidadModel>();
             foreach (DataGridViewRow row in dataGridViewHabilidades.Rows)
             {
-                
                 if ((row.Cells[0].Value) != null)
                 {
                     listaHabilidadesClase.Add(_manejoHabilidadesController.BuscarPorNombre(row.Cells[nombreColumn.Name].Value.ToString()));
                 }
             }
-            
 
             ClaseModel nuevaClaseModel = new ClaseModel(txtNomClase.Text, modAtributosModel, listaHabilidadesClase);
-
             listaClases.Add(nuevaClaseModel);
             _manejoClasesController.AgregarListaClases(listaClases);
-            MessageBox.Show("ClaseModel agregada");
-            this.Close();
+            MessageBox.Show(@"Clase agregada");
+            Close();
         }
 
         private void InicializadorBoxClases()
@@ -55,19 +52,12 @@ namespace Character_Inventory_Administrator.Vistas
 
         private void InicializarGridViewHabilidades()
         {
-            listaTodasHabilidades = _manejoHabilidadesController.DameListaComp();
-            habilidadesSource.DataSource = listaTodasHabilidades;
+            _listaTodasHabilidades = _manejoHabilidadesController.DameListaComp();
+            habilidadesSource.DataSource = _listaTodasHabilidades;
             dataGridViewHabilidades.AutoGenerateColumns = false;
-            //DataGridViewTextBoxColumn nombreColumn = new DataGridViewTextBoxColumn();
             nombreColumn.DataPropertyName = "Nombre";
-            //nombreColumn.HeaderText = "Nombre";
-            //DataGridViewTextBoxColumn atributoClaveColumn = new DataGridViewTextBoxColumn();
+            normalColumn.DataPropertyName = "Normal";
             atributoClaveColumn.DataPropertyName = "AtributoClave";
-            //atributoClaveColumn.HeaderText = "Atributo Clave";
-            //Pertenece.TrueValue = true;
-            //Pertenece.FalseValue = false;
-            //dataGridViewHabilidades.Columns.Add(nombreColumn);
-            //dataGridViewHabilidades.Columns.Add(atributoClaveColumn);
             dataGridViewHabilidades.DataSource = habilidadesSource;
         }
     }

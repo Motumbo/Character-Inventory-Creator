@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfClaseModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ClaseModel>
+    <Nombre>Probador</Nombre>
+    <ModAtributosModel>
+      <Fuerza>3</Fuerza>
+      <Destreza>1</Destreza>
+      <Constitucion>1</Constitucion>
+      <Inteligencia>-5</Inteligencia>
+      <Sabiduria>-10</Sabiduria>
+      <Carisma>5</Carisma>
+    </ModAtributosModel>
+    <ListaHabilidadesClase>
+      <HabilidadModel>
+        <Nombre>Abrir Cerradura</Nombre>
+        <AtributoClave>Destreza</AtributoClave>
+        <Normal>false</Normal>
+        <Rangos>0</Rangos>
+      </HabilidadModel>
+      <HabilidadModel>
+        <Nombre>Avistar</Nombre>
+        <AtributoClave>Sabiduria</AtributoClave>
+        <Normal>true</Normal>
+        <Rangos>0</Rangos>
+      </HabilidadModel>
+      <HabilidadModel>
+        <Nombre>Buscar</Nombre>
+        <AtributoClave>Inteligencia</AtributoClave>
+        <Normal>true</Normal>
+        <Rangos>0</Rangos>
+      </HabilidadModel>
+      <HabilidadModel>
+        <Nombre>Descifrar Escritura</Nombre>
+        <AtributoClave>Inteligencia</AtributoClave>
+        <Normal>false</Normal>
+        <Rangos>0</Rangos>
+      </HabilidadModel>
+    </ListaHabilidadesClase>
+  </ClaseModel>
+</ArrayOfClaseModel>

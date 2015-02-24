@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfHabilidadModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HabilidadModel>
+    <Nombre>Abrir Cerradura</Nombre>
+    <AtributoClave>Destreza</AtributoClave>
+    <Normal>false</Normal>
+    <Rangos>0</Rangos>
+  </HabilidadModel>
+  <HabilidadModel>
+    <Nombre>Averiguar Intenciones</Nombre>
+    <AtributoClave>Sabiduria</AtributoClave>
+    <Normal>true</Normal>
+    <Rangos>0</Rangos>
+  </HabilidadModel>
+  <HabilidadModel>
+    <Nombre>Avistar</Nombre>
+    <AtributoClave>Sabiduria</AtributoClave>
+    <Normal>true</Normal>
+    <Rangos>0</Rangos>
+  </HabilidadModel>
+  <HabilidadModel>
+    <Nombre>Buscar</Nombre>
+    <AtributoClave>Inteligencia</AtributoClave>
+    <Normal>true</Normal>
+    <Rangos>0</Rangos>
+  </HabilidadModel>
+  <HabilidadModel>
+    <Nombre>Concentracion</Nombre>
+    <AtributoClave>Constitucion</AtributoClave>
+    <Normal>true</Normal>
+    <Rangos>0</Rangos>
+  </HabilidadModel>
+  <HabilidadModel>
+    <Nombre>Conocimiento de Conjuros</Nombre>
+    <AtributoClave>Inteligencia</AtributoClave>
+    <Normal>false</Normal>
+    <Rangos>0</Rangos>
+  </HabilidadModel>
+  <HabilidadModel>
+    <Nombre>Descifrar Escritura</Nombre>
+    <AtributoClave>Inteligencia</AtributoClave>
+    <Normal>false</Normal>
+    <Rangos>0</Rangos>
+  </HabilidadModel>
+</ArrayOfHabilidadModel>

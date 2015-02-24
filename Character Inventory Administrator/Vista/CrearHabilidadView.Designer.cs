@@ -36,6 +36,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewHabilidades = new System.Windows.Forms.DataGridView();
             this.habilidadesSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.checkNormal = new System.Windows.Forms.CheckBox();
+            this.nombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.normalColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.atributoClaveColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHabilidades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.habilidadesSource)).BeginInit();
             this.SuspendLayout();
@@ -44,9 +49,9 @@
             // 
             this.btnCargarHabilidad.Location = new System.Drawing.Point(280, 31);
             this.btnCargarHabilidad.Name = "btnCargarHabilidad";
-            this.btnCargarHabilidad.Size = new System.Drawing.Size(75, 43);
+            this.btnCargarHabilidad.Size = new System.Drawing.Size(75, 50);
             this.btnCargarHabilidad.TabIndex = 0;
-            this.btnCargarHabilidad.Text = "Guardar HabilidadModel";
+            this.btnCargarHabilidad.Text = "Guardar Habilidad";
             this.btnCargarHabilidad.UseVisualStyleBackColor = true;
             this.btnCargarHabilidad.Click += new System.EventHandler(this.btnCargarHabilidad_Click);
             // 
@@ -93,28 +98,79 @@
             // 
             // dataGridViewHabilidades
             // 
+            this.dataGridViewHabilidades.AllowUserToAddRows = false;
+            this.dataGridViewHabilidades.AllowUserToDeleteRows = false;
             this.dataGridViewHabilidades.AutoGenerateColumns = false;
             this.dataGridViewHabilidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHabilidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombreColumn,
+            this.normalColumn,
+            this.atributoClaveColumn});
             this.dataGridViewHabilidades.DataSource = this.habilidadesSource;
             this.dataGridViewHabilidades.Location = new System.Drawing.Point(12, 98);
             this.dataGridViewHabilidades.Name = "dataGridViewHabilidades";
             this.dataGridViewHabilidades.ReadOnly = true;
             this.dataGridViewHabilidades.RowHeadersVisible = false;
-            this.dataGridViewHabilidades.Size = new System.Drawing.Size(229, 237);
+            this.dataGridViewHabilidades.Size = new System.Drawing.Size(343, 237);
             this.dataGridViewHabilidades.TabIndex = 78;
             // 
-            // Crear_Habilidad
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(190, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 79;
+            this.label3.Text = "Normal";
+            // 
+            // checkNormal
+            // 
+            this.checkNormal.AutoSize = true;
+            this.checkNormal.Location = new System.Drawing.Point(232, 63);
+            this.checkNormal.Name = "checkNormal";
+            this.checkNormal.Size = new System.Drawing.Size(15, 14);
+            this.checkNormal.TabIndex = 80;
+            this.checkNormal.UseVisualStyleBackColor = true;
+            // 
+            // nombreColumn
+            // 
+            this.nombreColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreColumn.HeaderText = "Nombre";
+            this.nombreColumn.Name = "nombreColumn";
+            this.nombreColumn.ReadOnly = true;
+            // 
+            // normalColumn
+            // 
+            this.normalColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.normalColumn.HeaderText = "Normal";
+            this.normalColumn.Name = "normalColumn";
+            this.normalColumn.ReadOnly = true;
+            this.normalColumn.Width = 46;
+            // 
+            // atributoClaveColumn
+            // 
+            this.atributoClaveColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.atributoClaveColumn.HeaderText = "Atributo Clave";
+            this.atributoClaveColumn.Name = "atributoClaveColumn";
+            this.atributoClaveColumn.ReadOnly = true;
+            this.atributoClaveColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.atributoClaveColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.atributoClaveColumn.Width = 79;
+            // 
+            // CrearHabilidadView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(367, 347);
+            this.Controls.Add(this.checkNormal);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridViewHabilidades);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.selectorAtribPrincipal);
             this.Controls.Add(this.txtNombreHabilidad);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCargarHabilidad);
-            this.Name = "Crear_Habilidad";
+            this.Name = "CrearHabilidadView";
             this.Text = "Crear_Habilidad";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHabilidades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.habilidadesSource)).EndInit();
@@ -132,5 +188,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridViewHabilidades;
         private System.Windows.Forms.BindingSource habilidadesSource;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkNormal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn normalColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn atributoClaveColumn;
     }
 }

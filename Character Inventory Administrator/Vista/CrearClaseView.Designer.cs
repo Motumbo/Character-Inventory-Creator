@@ -1,4 +1,4 @@
-﻿namespace Character_Inventory_Administrator.Vistas
+﻿namespace Character_Inventory_Administrator.Vista
 {
     partial class CrearClaseView
     {
@@ -49,6 +49,7 @@
             this.habilidadesSource = new System.Windows.Forms.BindingSource(this.components);
             this.Pertenece = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.nombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.normalColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.atributoClaveColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.selectFuerza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectCarisma)).BeginInit();
@@ -206,15 +207,15 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 60;
-            this.label1.Text = "Nombre ClaseModel";
+            this.label1.Text = "Nombre Clase";
             // 
             // btnCargarClase
             // 
-            this.btnCargarClase.Location = new System.Drawing.Point(328, 433);
+            this.btnCargarClase.Location = new System.Drawing.Point(328, 12);
             this.btnCargarClase.Name = "btnCargarClase";
             this.btnCargarClase.Size = new System.Drawing.Size(96, 56);
             this.btnCargarClase.TabIndex = 59;
-            this.btnCargarClase.Text = "Guardar ClaseModel";
+            this.btnCargarClase.Text = "Guardar Clase";
             this.btnCargarClase.UseVisualStyleBackColor = true;
             this.btnCargarClase.Click += new System.EventHandler(this.btnCargarClase_Click);
             // 
@@ -235,12 +236,13 @@
             this.dataGridViewHabilidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Pertenece,
             this.nombreColumn,
+            this.normalColumn,
             this.atributoClaveColumn});
             this.dataGridViewHabilidades.DataSource = this.habilidadesSource;
-            this.dataGridViewHabilidades.Location = new System.Drawing.Point(14, 223);
+            this.dataGridViewHabilidades.Location = new System.Drawing.Point(12, 219);
             this.dataGridViewHabilidades.Name = "dataGridViewHabilidades";
             this.dataGridViewHabilidades.RowHeadersVisible = false;
-            this.dataGridViewHabilidades.Size = new System.Drawing.Size(294, 237);
+            this.dataGridViewHabilidades.Size = new System.Drawing.Size(412, 270);
             this.dataGridViewHabilidades.TabIndex = 79;
             // 
             // Pertenece
@@ -256,10 +258,20 @@
             this.nombreColumn.HeaderText = "Nombre";
             this.nombreColumn.Name = "nombreColumn";
             // 
+            // normalColumn
+            // 
+            this.normalColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.normalColumn.HeaderText = "Normal";
+            this.normalColumn.Name = "normalColumn";
+            this.normalColumn.ReadOnly = true;
+            this.normalColumn.Width = 46;
+            // 
             // atributoClaveColumn
             // 
+            this.atributoClaveColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.atributoClaveColumn.HeaderText = "Atributo Clave";
             this.atributoClaveColumn.Name = "atributoClaveColumn";
+            this.atributoClaveColumn.Width = 98;
             // 
             // CrearClaseView
             // 
@@ -320,6 +332,7 @@
         private System.Windows.Forms.BindingSource habilidadesSource;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Pertenece;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn normalColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn atributoClaveColumn;
     }
 }

@@ -8,7 +8,7 @@ namespace Character_Inventory_Administrator.Vista
 {
     public partial class CrearHabilidadView : Form
     {
-        List<HabilidadModel> listaHabilidades = new List<HabilidadModel>();
+        List<HabilidadModel> _listaHabilidades = new List<HabilidadModel>();
         HabilidadesController _manejoHabilidadesController = new HabilidadesController();
 
         public CrearHabilidadView()
@@ -19,25 +19,21 @@ namespace Character_Inventory_Administrator.Vista
 
         private void btnCargarHabilidad_Click(object sender, EventArgs e)
         {
-            HabilidadModel nuevaHabilidadModel = new HabilidadModel(txtNombreHabilidad.Text, selectorAtribPrincipal.Text);
-            listaHabilidades.Add(nuevaHabilidadModel);
-            _manejoHabilidadesController.AgregarListaHabilidades(listaHabilidades);
-            this.Close();
+            HabilidadModel nuevaHabilidadModel = new HabilidadModel(txtNombreHabilidad.Text, selectorAtribPrincipal.Text, checkNormal.Checked); 
+            _listaHabilidades.Add(nuevaHabilidadModel);
+            _manejoHabilidadesController.AgregarListaHabilidades(_listaHabilidades);
+            InicializarGridViewHabilidades();
+            //Close();
         }
         
         private void InicializarGridViewHabilidades()
         {
-            listaHabilidades = _manejoHabilidadesController.DameListaComp();
-            habilidadesSource.DataSource = listaHabilidades;
+            _listaHabilidades = _manejoHabilidadesController.DameListaComp();
+            habilidadesSource.DataSource = _listaHabilidades;
             dataGridViewHabilidades.AutoGenerateColumns = false;
-            DataGridViewTextBoxColumn nombreColumn = new DataGridViewTextBoxColumn();
             nombreColumn.DataPropertyName = "Nombre";
-            nombreColumn.HeaderText = "Nombre";
-            DataGridViewTextBoxColumn atributoClaveColumn = new DataGridViewTextBoxColumn();
+            normalColumn.DataPropertyName = "Normal";
             atributoClaveColumn.DataPropertyName = "AtributoClave";
-            atributoClaveColumn.HeaderText = "Atributo Clave";
-            dataGridViewHabilidades.Columns.Add(nombreColumn);
-            dataGridViewHabilidades.Columns.Add(atributoClaveColumn);
             dataGridViewHabilidades.DataSource = habilidadesSource;
         }
     }
