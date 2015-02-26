@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using Character_Inventory_Administrator.Dao;
 
 namespace Character_Inventory_Administrator.Modelo
 {
@@ -9,12 +10,15 @@ namespace Character_Inventory_Administrator.Modelo
         private string _atributoClave;
         private bool _normal;
         private int _rangos;
-        
-        //int modClave;
-        //int modOtro;
+        //private int modClave;
+        //private int modOtro;
 
-        //int mod1;
-        //int mod2;
+        ////////////////////////////////// PARA MANEJO DE DAO DE LA CLASE ////////////////////////////////////////////////////////////////
+
+        static private HabilidadesDAO _datos = new HabilidadesDAO();
+        static private List<HabilidadModel> _listaHabilidades = new List<HabilidadModel>();
+
+        ////////////////////////////////// PARA MANEJO DE DAO DE LA CLASE ////////////////////////////////////////////////////////////////
 
         public bool DeClase
         {
@@ -106,5 +110,38 @@ namespace Character_Inventory_Administrator.Modelo
         //        }
             
         //}
+
+        ////////////////////////////////////////////////////////////////////////// METODOS DE ALMACENAMIENTO DE LA CLASE //////////////////////////////////////////
+
+        static public HabilidadModel AgregarHabilidad(HabilidadModel nuevaHabilidadModel)
+        {
+            return nuevaHabilidadModel;
+        }
+
+        static public List<HabilidadModel> AgregarListaHabilidades(List<HabilidadModel> nuevaListaHabilidades)
+        {
+            _datos.AgregarArchivo(nuevaListaHabilidades);
+            return nuevaListaHabilidades;
+        }
+
+        static public List<HabilidadModel> DameListaCompHabilidades()
+        {
+            return _datos.DameAll();
+        }
+
+        static public HabilidadModel BuscarPorNombre(string nombre)
+        {
+            _listaHabilidades = _datos.DameAll();
+            foreach (HabilidadModel habilidad in _listaHabilidades)
+            {
+                if (habilidad.Nombre == nombre)
+                {
+                    return habilidad;
+                }
+            }
+            return null;
+        }
+
+
     }
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfRazaModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RazaModel>
+    <Nombre>Humano</Nombre>
+    <ModAtributosModel>
+      <Fuerza>0</Fuerza>
+      <Destreza>0</Destreza>
+      <Constitucion>0</Constitucion>
+      <Inteligencia>0</Inteligencia>
+      <Sabiduria>0</Sabiduria>
+      <Carisma>0</Carisma>
+    </ModAtributosModel>
+  </RazaModel>
+</ArrayOfRazaModel>

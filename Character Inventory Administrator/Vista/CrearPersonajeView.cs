@@ -1,19 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Character_Inventory_Administrator.Controlador;
 using Character_Inventory_Administrator.Modelo;
 
 namespace Character_Inventory_Administrator.Vista
 {
     public partial class CrearPersonajeView : Form
     {
-        private PersonajeModel _personajeModelModel;
-        private PersonajesController _personajeController;
-
-        private RazasController _razaController = new RazasController();
-        private ClasesController _claseController = new ClasesController();
-        private HabilidadesController _habilidadesController = new HabilidadesController();
+        private PersonajeModel NuevoPersonajeModel = new PersonajeModel();
 
         private AtributosModel _atributosModelCreacion = new AtributosModel();
         private RazaModel _razaModelCreacion = new RazaModel();
@@ -24,29 +18,13 @@ namespace Character_Inventory_Administrator.Vista
         private List<HabilidadModel> listaHabilidades = new List<HabilidadModel>();
         private List<HabilidadModel> _listaHabilidadesClase = new List<HabilidadModel>();
 
-        //List<PersonajeModel> listaPersonajes = new List<PersonajeModel>();
-        
-        public PersonajesController PersonajeController
-        {
-            get { return _personajeController; }
-            set { _personajeController = value; }
-        }
-
-        public PersonajeModel NuevoPersonajeModel
-        {
-            get { return _personajeModelModel; }
-            set { _personajeModelModel = value; }
-        }
-
-
         public CrearPersonajeView()
         {
             InitializeComponent();
-            NuevoPersonajeModel = new PersonajeModel();
-            listaClases = _claseController.DameListaComp();
-            listaRazas = _razaController.DameListaComp();
-            listaHabilidades = _habilidadesController.DameListaComp();
-            _listaHabilidadesClase = new List<HabilidadModel>();
+ 
+            listaClases = ClaseModel.DameListaCompClases();
+            listaRazas = RazaModel.DameListaCompRazas();
+            listaHabilidades = HabilidadModel.DameListaCompHabilidades();
             
             InicializarSelectorRazas();
             InicializarSelectorClases();
@@ -121,14 +99,14 @@ namespace Character_Inventory_Administrator.Vista
 
         private void selectorRaza_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            _razaModelCreacion = _razaController.BuscarPorNombre(selectorRaza.SelectedValue.ToString());
+            _razaModelCreacion = RazaModel.BuscarPorNombre(selectorRaza.SelectedValue.ToString());
             NuevoPersonajeModel.RazaModel = _razaModelCreacion;
             SetValuesAtributeBoxes();
             SetDataGridViewHabilidades();
         }
         private void selectorClase_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            _claseModelCreacion = _claseController.BuscarPorNombre(selectorClase.SelectedValue.ToString());
+            _claseModelCreacion = ClaseModel.BuscarPorNombre(selectorClase.SelectedValue.ToString());
             NuevoPersonajeModel.ClaseModel = _claseModelCreacion;
             _listaHabilidadesClase = _claseModelCreacion.ListaHabilidadesClase;
             SetValuesAtributeBoxes();
@@ -157,7 +135,6 @@ namespace Character_Inventory_Administrator.Vista
             normalColumn.DataPropertyName = "Normal";
             atributoClaveColumn.DataPropertyName = "AtributoClave";
             rangosColumn.DataPropertyName = "Rangos";
-
             dataGridViewHabilidades.DataSource = habilidadesSource;
         }
 
@@ -241,7 +218,7 @@ namespace Character_Inventory_Administrator.Vista
             NuevoPersonajeModel.RazaModel = _razaModelCreacion;
             NuevoPersonajeModel.ClaseModel = _claseModelCreacion;
 
-            this.Close();
+            Close();
         }
     }
 }

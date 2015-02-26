@@ -48,10 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controlador\ClasesController.cs" />
-    <Compile Include="Controlador\HabilidadesController.cs" />
-    <Compile Include="Controlador\PersonajesController.cs" />
-    <Compile Include="Controlador\RazasController.cs" />
     <Compile Include="Dao\AbstractSingletonDAO.cs" />
     <Compile Include="Dao\ClasesDAO.cs" />
     <Compile Include="Dao\HabilidadesDAO.cs" />
@@ -131,6 +127,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Archivos\Clases.xml" />
     <Content Include="Archivos\Habilidades Comunes.xml" />
     <Content Include="Properties\DataSources\archivo Razas.xml">
       <SubType>Designer</SubType>

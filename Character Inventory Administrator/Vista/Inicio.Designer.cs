@@ -51,7 +51,7 @@
             this.btnAbrir.Name = "btnAbrir";
             this.btnAbrir.Size = new System.Drawing.Size(209, 23);
             this.btnAbrir.TabIndex = 1;
-            this.btnAbrir.Text = "Abrir PersonajeModel Ya Existente";
+            this.btnAbrir.Text = "Abrir Personaje Ya Existente";
             this.btnAbrir.UseVisualStyleBackColor = true;
             // 
             // btnCrearRaza

@@ -9,3 +9,4 @@ C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administ
 C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character Inventory Administrator.exe
 C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character Inventory Administrator.pdb
 C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character_Inventory_Administrator.Vista.CrearPersonajeView.resources
+C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character Inventory Administrator.csprojResolveAssemblyReference.cache

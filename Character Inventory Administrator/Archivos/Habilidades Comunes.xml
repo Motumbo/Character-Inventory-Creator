@@ -21,4 +21,25 @@
     <Normal>true</Normal>
     <Rangos>0</Rangos>
   </HabilidadModel>
+  <HabilidadModel>
+    <DeClase>false</DeClase>
+    <Nombre>Buscar</Nombre>
+    <AtributoClave>Inteligencia</AtributoClave>
+    <Normal>true</Normal>
+    <Rangos>0</Rangos>
+  </HabilidadModel>
+  <HabilidadModel>
+    <DeClase>false</DeClase>
+    <Nombre>Concentracion</Nombre>
+    <AtributoClave>Constitucion</AtributoClave>
+    <Normal>true</Normal>
+    <Rangos>0</Rangos>
+  </HabilidadModel>
+  <HabilidadModel>
+    <DeClase>false</DeClase>
+    <Nombre>Conocimiento de Conjuros</Nombre>
+    <AtributoClave>Inteligencia</AtributoClave>
+    <Normal>false</Normal>
+    <Rangos>0</Rangos>
+  </HabilidadModel>
 </ArrayOfHabilidadModel>
