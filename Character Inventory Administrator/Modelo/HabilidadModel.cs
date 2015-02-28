@@ -13,13 +13,7 @@ namespace Character_Inventory_Administrator.Modelo
         //private int modClave;
         //private int modOtro;
 
-        ////////////////////////////////// PARA MANEJO DE DAO DE LA CLASE ////////////////////////////////////////////////////////////////
-
-        static private HabilidadesDAO _datos = new HabilidadesDAO();
-        static private List<HabilidadModel> _listaHabilidades = new List<HabilidadModel>();
-
-        ////////////////////////////////// PARA MANEJO DE DAO DE LA CLASE ////////////////////////////////////////////////////////////////
-
+        
         public bool DeClase
         {
             get { return _deClase; }
@@ -111,8 +105,11 @@ namespace Character_Inventory_Administrator.Modelo
             
         //}
 
-        ////////////////////////////////////////////////////////////////////////// METODOS DE ALMACENAMIENTO DE LA CLASE //////////////////////////////////////////
+        //////////////////////////////////////////////////////// METODOS PARA ALMACENAMIENTO CON DAO DE LA CLASE //////////////////////////////////////////
+        static private HabilidadesDAO _datos = new HabilidadesDAO();
+        static private List<HabilidadModel> _listaHabilidades = new List<HabilidadModel>();
 
+        
         static public HabilidadModel AgregarHabilidad(HabilidadModel nuevaHabilidadModel)
         {
             return nuevaHabilidadModel;
@@ -141,7 +138,7 @@ namespace Character_Inventory_Administrator.Modelo
             }
             return null;
         }
-
+        //////////////////////////////////////////////////////// METODOS PARA ALMACENAMIENTO CON DAO DE LA CLASE //////////////////////////////////////////
 
     }
 }

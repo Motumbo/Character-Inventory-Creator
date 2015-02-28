@@ -19,7 +19,7 @@ namespace Character_Inventory_Administrator.Vista
         private void btnCargarRaza_Click(object sender, EventArgs e)
         {
             AtributosModel modAtributosModel = new AtributosModel((int)selectFuerza.Value, (int)selectDestreza.Value, (int)selectConstitucion.Value, (int)selectInteligencia.Value, (int)selectSabiduria.Value, (int)selectCarisma.Value);
-            RazaModel nuevaRazaModel = new RazaModel(txtNomRaza.Text, modAtributosModel);
+            RazaModel nuevaRazaModel = new RazaModel(txtNomRaza.Text, modAtributosModel, selectorTamaño.SelectedItem.ToString(), (int)selectorVelocidad.Value);
             listaRazas.Add(nuevaRazaModel);
             RazaModel.AgregarListaRazas(listaRazas);
             MessageBox.Show(@"Raza agregada");

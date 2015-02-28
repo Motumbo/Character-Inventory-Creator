@@ -22,12 +22,6 @@ namespace Character_Inventory_Administrator.Modelo
         private string _pelo;
         private string _piel;
 
-        ////////////////////////////////// PARA MANEJO DE DAO DE LA CLASE ////////////////////////////////////////////////////////////////
-
-        static private PersonajesDAO _datos = new PersonajesDAO();
-        static private List<PersonajeModel> _listaPersonajes = new List<PersonajeModel>();
-
-        ////////////////////////////////// PARA MANEJO DE DAO DE LA CLASE ////////////////////////////////////////////////////////////////
 
         public string Nombre
         {
@@ -138,12 +132,11 @@ namespace Character_Inventory_Administrator.Modelo
             Pelo = pe;
             Piel = pi;
         }
-
+        ////////////////////////////////////////////////////////////////////////// METODOS DE ATRIBUTOS PRINCIPALES //////////////////////////////////////////
         public int Fuerza()
         {
             return AtributosModel.Fuerza + RazaModel.ModAtributosModel.Fuerza + ClaseModel.ModAtributosModel.Fuerza;
         }
-
         public int ModFuerza()
         {
             return (((Fuerza()) - 10)/2);
@@ -153,7 +146,6 @@ namespace Character_Inventory_Administrator.Modelo
         {
             return AtributosModel.Destreza + RazaModel.ModAtributosModel.Destreza + ClaseModel.ModAtributosModel.Destreza;
         }
-
         public int ModDestreza()
         {
             return (((Destraza()) - 10)/2);
@@ -163,7 +155,6 @@ namespace Character_Inventory_Administrator.Modelo
         {
             return AtributosModel.Constitucion + RazaModel.ModAtributosModel.Constitucion + ClaseModel.ModAtributosModel.Constitucion;
         }
-
         public int ModConstitucion()
         {
             return (Constitucion() - 10)/2;
@@ -173,7 +164,6 @@ namespace Character_Inventory_Administrator.Modelo
         {
             return AtributosModel.Inteligencia + RazaModel.ModAtributosModel.Inteligencia + ClaseModel.ModAtributosModel.Inteligencia;
         }
-
         public int ModInteligencia()
         {
             return (Inteligencia() - 10)/2;
@@ -183,7 +173,6 @@ namespace Character_Inventory_Administrator.Modelo
         {
             return AtributosModel.Sabiduria + RazaModel.ModAtributosModel.Sabiduria + ClaseModel.ModAtributosModel.Sabiduria;
         }
-
         public int ModSabiduria()
         {
             return (Sabiduria() - 10)/2;
@@ -193,13 +182,24 @@ namespace Character_Inventory_Administrator.Modelo
         {
             return AtributosModel.Carisma + RazaModel.ModAtributosModel.Carisma + ClaseModel.ModAtributosModel.Carisma;
         }
-
         public int ModCarisma()
         {
             return (Carisma() - 10)/2;
         }
 
-        ////////////////////////////////////////////////////////////////////////// METODOS DE ALMACENAMIENTO DE LA CLASE //////////////////////////////////////////
+        public string Tamaño()
+        {
+            return _razaModel.Tamaño;
+        }
+
+        public int Velocidad()
+        {
+            return _razaModel.Velocidad + _claseModel.Velocidad;
+        }
+
+        //////////////////////////////////////////////////////// METODOS PARA ALMACENAMIENTO CON DAO DE LA CLASE //////////////////////////////////////////
+        static private PersonajesDAO _datos = new PersonajesDAO();
+        static private List<PersonajeModel> _listaPersonajes = new List<PersonajeModel>();
 
         static public PersonajeModel AgregarPersonaje(PersonajeModel nuevoPersonajeModel)
         {
@@ -208,18 +208,15 @@ namespace Character_Inventory_Administrator.Modelo
             AgregarListPersonajes(_listaPersonajes);
             return nuevoPersonajeModel;
         }
-
         static public List<PersonajeModel> AgregarListPersonajes(List<PersonajeModel> nuevaListaPersonajes)
         {
             _datos.AgregarArchivo(nuevaListaPersonajes);
             return nuevaListaPersonajes;
         }
-
         static public List<PersonajeModel> DameListaComp()
         {
             return _datos.DameAll();
         }
-
         static public PersonajeModel BuscarPorNombre(string nombre)
         {
             _listaPersonajes = _datos.DameAll();
@@ -232,7 +229,6 @@ namespace Character_Inventory_Administrator.Modelo
             }
             return null;
         }
-
         static public PersonajeModel BuscarPersonaje(PersonajeModel buscado)
         {
             _listaPersonajes = _datos.DameAll();
@@ -245,5 +241,7 @@ namespace Character_Inventory_Administrator.Modelo
             }
             return null;
         }
+        //////////////////////////////////////////////////////// METODOS PARA ALMACENAMIENTO CON DAO DE LA CLASE //////////////////////////////////////////
+
     }
 }

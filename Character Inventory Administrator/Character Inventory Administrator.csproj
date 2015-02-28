@@ -129,6 +129,7 @@
   <ItemGroup>
     <Content Include="Archivos\Clases.xml" />
     <Content Include="Archivos\Habilidades Comunes.xml" />
+    <Content Include="Archivos\Razas.xml" />
     <Content Include="Properties\DataSources\archivo Razas.xml">
       <SubType>Designer</SubType>
     </Content>

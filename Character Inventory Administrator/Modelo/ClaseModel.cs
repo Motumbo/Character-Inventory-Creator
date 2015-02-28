@@ -7,48 +7,50 @@ namespace Character_Inventory_Administrator.Modelo
     {
         private string _nombre;
         private AtributosModel _modAtributosModel;
+        private int _velocidad;
         private List<HabilidadModel> _listaHabilidadesClase;
         
-        ////////////////////////////////// PARA MANEJO DE DAO DE LA CLASE ////////////////////////////////////////////////////////////////
-        
-        static private ClasesDAO _datos = new ClasesDAO();
-        static private List<ClaseModel> _listaClases = new List<ClaseModel>();
-
-        ////////////////////////////////// PARA MANEJO DE DAO DE LA CLASE ////////////////////////////////////////////////////////////////
         
         public string Nombre
         {
             get { return _nombre; }
             set { _nombre = value; }
         }
-
         public AtributosModel ModAtributosModel
         {
             get { return _modAtributosModel; }
             set { _modAtributosModel = value; }
         }
-
+        public int Velocidad
+        {
+            get { return _velocidad; }
+            set { _velocidad = value; }
+        }
         public List<HabilidadModel> ListaHabilidadesClase
         {
             get { return _listaHabilidadesClase; }
             set { _listaHabilidadesClase = value; }
         }
-
+        
         public ClaseModel()
         {
             Nombre = "";
             ModAtributosModel = new AtributosModel();
+            Velocidad = 0;
             ListaHabilidadesClase = new List<HabilidadModel>();
         }
 
-        public ClaseModel(string nombreClase, AtributosModel atribClase, List<HabilidadModel> listaHabilidades)
+        public ClaseModel(string nombreClase, AtributosModel atribClase, int velocidadClase,List<HabilidadModel> listaHabilidades)
         {
             Nombre = nombreClase;
             ModAtributosModel = atribClase;
+            Velocidad = velocidadClase;
             ListaHabilidadesClase = listaHabilidades;
         }
 
-        ////////////////////////////////////////////////////////////////////////// METODOS DE ALMACENAMIENTO DE LA CLASE //////////////////////////////////////////
+        //////////////////////////////////////////////////////// METODOS PARA ALMACENAMIENTO CON DAO DE LA CLASE //////////////////////////////////////////
+        static private ClasesDAO _datos = new ClasesDAO();
+        static private List<ClaseModel> _listaClases = new List<ClaseModel>();
 
         static public ClaseModel AgregarClase(ClaseModel nuevaClaseModel)
         {
@@ -78,5 +80,7 @@ namespace Character_Inventory_Administrator.Modelo
             }
             return null;
         }
+        //////////////////////////////////////////////////////// METODOS PARA ALMACENAMIENTO CON DAO DE LA CLASE //////////////////////////////////////////
+    
     }
 }

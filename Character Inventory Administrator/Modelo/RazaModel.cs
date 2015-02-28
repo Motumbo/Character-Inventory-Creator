@@ -8,47 +8,59 @@ namespace Character_Inventory_Administrator.Modelo
         private string _nombre;
         private AtributosModel _modAtributosModel;
         private List<HabilidadModel> _listaModHabilidades;
+        private string _tamaño;
+        private int _velocidad;
 
-        ////////////////////////////////// PARA MANEJO DE DAO DE LA CLASE ////////////////////////////////////////////////////////////////
-
-        static private RazasDAO _datos = new RazasDAO();
-        static private List<RazaModel> _listaRazas = new List<RazaModel>();
-
-        ////////////////////////////////// PARA MANEJO DE DAO DE LA CLASE ////////////////////////////////////////////////////////////////
 
         public string Nombre
         {
             get { return _nombre; }
             set { _nombre = value; }
         }
-
         public AtributosModel ModAtributosModel
         {
             get { return _modAtributosModel; }
             set { _modAtributosModel = value; }
         }
-
         public List<HabilidadModel> ListaHabilidadesRaza
         {
             get { return _listaModHabilidades; }
             set { _listaModHabilidades = value; }
         }
+        public string Tamaño
+        {
+            get { return _tamaño; }
+            set { _tamaño = value; }
+        }
+        public int Velocidad
+        {
+            get { return _velocidad; }
+            set { _velocidad = value; }
+        }
+
+        
 
         public RazaModel()
         {
             Nombre = "";
             ModAtributosModel = new AtributosModel();
             ListaHabilidadesRaza = new List<HabilidadModel>();
+            Tamaño = "";
+            Velocidad = 0;
         }
 
-        public RazaModel(string nombreRaza, AtributosModel atribRaza)
+        public RazaModel(string nombreRaza, AtributosModel atribRaza, string tamañoRaza, int velocidadRaza)
         {
             Nombre = nombreRaza;
             ModAtributosModel = atribRaza;
             ListaHabilidadesRaza = null;
+            Tamaño = tamañoRaza;
+            Velocidad = velocidadRaza;
         }
 
-        ////////////////////////////////////////////////////////////////////////// METODOS DE ALMACENAMIENTO DE LA CLASE //////////////////////////////////////////
+        //////////////////////////////////////////////////////// METODOS PARA ALMACENAMIENTO CON DAO DE LA CLASE //////////////////////////////////////////
+        static private RazasDAO _datos = new RazasDAO();
+        static private List<RazaModel> _listaRazas = new List<RazaModel>();
 
         static public RazaModel AgregarRaza(RazaModel nuevaRazaModel)
         {
@@ -78,5 +90,7 @@ namespace Character_Inventory_Administrator.Modelo
             }
             return null;
         }
+        //////////////////////////////////////////////////////// METODOS PARA ALMACENAMIENTO CON DAO DE LA CLASE //////////////////////////////////////////
+        
     }
 }

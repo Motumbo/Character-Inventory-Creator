@@ -27,13 +27,12 @@ namespace Character_Inventory_Administrator.Vista
             {
                 if ((row.Cells[0].Value) != null)
                 {
-                    HabilidadModel habilidad = new HabilidadModel();
-                    habilidad = HabilidadModel.BuscarPorNombre(row.Cells[nombreColumn.Name].Value.ToString());
+                    HabilidadModel habilidad = HabilidadModel.BuscarPorNombre(row.Cells[nombreColumn.Name].Value.ToString());
                     habilidad.DeClase = true;
                     listaHabilidadesClase.Add(habilidad);
                 }
             }
-            ClaseModel nuevaClaseModel = new ClaseModel(txtNomClase.Text, modAtributosModel, listaHabilidadesClase);
+            ClaseModel nuevaClaseModel = new ClaseModel(txtNomClase.Text, modAtributosModel, (int)selectorVelocidad.Value, listaHabilidadesClase);
             listaClases.Add(nuevaClaseModel);
             ClaseModel.AgregarListaClases(listaClases);
             MessageBox.Show(@"Clase agregada");

@@ -35,12 +35,12 @@
             this.selectorAtribPrincipal = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewHabilidades = new System.Windows.Forms.DataGridView();
-            this.habilidadesSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkNormal = new System.Windows.Forms.CheckBox();
             this.nombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.normalColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.atributoClaveColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.habilidadesSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.checkNormal = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHabilidades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.habilidadesSource)).BeginInit();
             this.SuspendLayout();
@@ -114,24 +114,6 @@
             this.dataGridViewHabilidades.Size = new System.Drawing.Size(343, 237);
             this.dataGridViewHabilidades.TabIndex = 78;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(190, 63);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 79;
-            this.label3.Text = "Normal";
-            // 
-            // checkNormal
-            // 
-            this.checkNormal.AutoSize = true;
-            this.checkNormal.Location = new System.Drawing.Point(232, 63);
-            this.checkNormal.Name = "checkNormal";
-            this.checkNormal.Size = new System.Drawing.Size(15, 14);
-            this.checkNormal.TabIndex = 80;
-            this.checkNormal.UseVisualStyleBackColor = true;
-            // 
             // nombreColumn
             // 
             this.nombreColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -157,6 +139,24 @@
             this.atributoClaveColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.atributoClaveColumn.Width = 79;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(190, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 79;
+            this.label3.Text = "Normal";
+            // 
+            // checkNormal
+            // 
+            this.checkNormal.AutoSize = true;
+            this.checkNormal.Location = new System.Drawing.Point(232, 63);
+            this.checkNormal.Name = "checkNormal";
+            this.checkNormal.Size = new System.Drawing.Size(15, 14);
+            this.checkNormal.TabIndex = 80;
+            this.checkNormal.UseVisualStyleBackColor = true;
+            // 
             // CrearHabilidadView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,7 +171,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCargarHabilidad);
             this.Name = "CrearHabilidadView";
-            this.Text = "Crear_Habilidad";
+            this.Text = "Crear Habilidad";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHabilidades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.habilidadesSource)).EndInit();
             this.ResumeLayout(false);

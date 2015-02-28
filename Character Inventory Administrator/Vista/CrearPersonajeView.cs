@@ -7,25 +7,29 @@ namespace Character_Inventory_Administrator.Vista
 {
     public partial class CrearPersonajeView : Form
     {
-        private PersonajeModel NuevoPersonajeModel = new PersonajeModel();
+        private readonly PersonajeModel _nuevoPersonajeModel = new PersonajeModel();
 
         private AtributosModel _atributosModelCreacion = new AtributosModel();
         private RazaModel _razaModelCreacion = new RazaModel();
         private ClaseModel _claseModelCreacion = new ClaseModel();
 
-        private List<RazaModel> listaRazas = new List<RazaModel>();
-        private List<ClaseModel> listaClases = new List<ClaseModel>();
-        private List<HabilidadModel> listaHabilidades = new List<HabilidadModel>();
+        private readonly List<RazaModel> _listaRazas = new List<RazaModel>();
+        private readonly List<ClaseModel> _listaClases = new List<ClaseModel>();
+        private readonly List<HabilidadModel> _listaHabilidades = new List<HabilidadModel>();
         private List<HabilidadModel> _listaHabilidadesClase = new List<HabilidadModel>();
 
         public CrearPersonajeView()
         {
             InitializeComponent();
  
-            listaClases = ClaseModel.DameListaCompClases();
-            listaRazas = RazaModel.DameListaCompRazas();
-            listaHabilidades = HabilidadModel.DameListaCompHabilidades();
-            
+            _listaClases = ClaseModel.DameListaCompClases();
+            _listaRazas = RazaModel.DameListaCompRazas();
+            _listaHabilidades = HabilidadModel.DameListaCompHabilidades();
+
+            _nuevoPersonajeModel.AtributosModel = _atributosModelCreacion;
+            _nuevoPersonajeModel.RazaModel = _razaModelCreacion;
+            _nuevoPersonajeModel.ClaseModel = _claseModelCreacion;
+
             InicializarSelectorRazas();
             InicializarSelectorClases();
             
@@ -40,6 +44,8 @@ namespace Character_Inventory_Administrator.Vista
             SetValuesAtributeBoxes();
             SetDataGridViewHabilidades();
         }
+
+
         private void SetearAtributosSeleccionados()
         {
             _atributosModelCreacion = new AtributosModel(
@@ -49,34 +55,34 @@ namespace Character_Inventory_Administrator.Vista
                 Convert.ToInt16(selectInteligencia.Value),
                 Convert.ToInt16(selectSabiduria.Value),
                 Convert.ToInt16(selectCarisma.Value));
-            NuevoPersonajeModel.AtributosModel = _atributosModelCreacion;
+            _nuevoPersonajeModel.AtributosModel = _atributosModelCreacion;
         }
         private void SetValuesAtributeBoxes()
         {
+            SetearAtributosSeleccionados();
             SetearModRaza();
             SetearModClase();
-            SetearAtributosSeleccionados();
             SetearAtributosTotales();
             SetearModAtributos();
         }
 
         private void SetearModAtributos()
         {
-            txtModFuerza.Text = NuevoPersonajeModel.ModFuerza().ToString();
-            txtModDestreza.Text = NuevoPersonajeModel.ModDestreza().ToString();
-            txtModConstitucion.Text = NuevoPersonajeModel.ModConstitucion().ToString();
-            txtModInteligencia.Text = NuevoPersonajeModel.ModInteligencia().ToString();
-            txtModSabiduria.Text = NuevoPersonajeModel.ModSabiduria().ToString();
-            txtModCarisma.Text = NuevoPersonajeModel.ModCarisma().ToString();
+            txtModFuerza.Text = _nuevoPersonajeModel.ModFuerza().ToString();
+            txtModDestreza.Text = _nuevoPersonajeModel.ModDestreza().ToString();
+            txtModConstitucion.Text = _nuevoPersonajeModel.ModConstitucion().ToString();
+            txtModInteligencia.Text = _nuevoPersonajeModel.ModInteligencia().ToString();
+            txtModSabiduria.Text = _nuevoPersonajeModel.ModSabiduria().ToString();
+            txtModCarisma.Text = _nuevoPersonajeModel.ModCarisma().ToString();
         }
         private void SetearAtributosTotales()
         {
-            txtTotalFuerza.Text = NuevoPersonajeModel.Fuerza().ToString();
-            txtTotalDestreza.Text = NuevoPersonajeModel.Destraza().ToString();
-            txtTotalConstitucion.Text = NuevoPersonajeModel.Constitucion().ToString();
-            txtTotalInteligencia.Text = NuevoPersonajeModel.Inteligencia().ToString();
-            txtTotalSabiduria.Text = NuevoPersonajeModel.Sabiduria().ToString();
-            txtTotalCarisma.Text = NuevoPersonajeModel.Carisma().ToString();
+            txtTotalFuerza.Text = _nuevoPersonajeModel.Fuerza().ToString();
+            txtTotalDestreza.Text = _nuevoPersonajeModel.Destraza().ToString();
+            txtTotalConstitucion.Text = _nuevoPersonajeModel.Constitucion().ToString();
+            txtTotalInteligencia.Text = _nuevoPersonajeModel.Inteligencia().ToString();
+            txtTotalSabiduria.Text = _nuevoPersonajeModel.Sabiduria().ToString();
+            txtTotalCarisma.Text = _nuevoPersonajeModel.Carisma().ToString();
         }
         private void SetearModRaza()
         {
@@ -100,36 +106,40 @@ namespace Character_Inventory_Administrator.Vista
         private void selectorRaza_SelectionChangeCommitted(object sender, EventArgs e)
         {
             _razaModelCreacion = RazaModel.BuscarPorNombre(selectorRaza.SelectedValue.ToString());
-            NuevoPersonajeModel.RazaModel = _razaModelCreacion;
+            _nuevoPersonajeModel.RazaModel = _razaModelCreacion;
             SetValuesAtributeBoxes();
             SetDataGridViewHabilidades();
+            txtTamaño.Text = _nuevoPersonajeModel.Tamaño();
+            txtVelocidad.Text = Convert.ToString(_nuevoPersonajeModel.Velocidad());
         }
         private void selectorClase_SelectionChangeCommitted(object sender, EventArgs e)
         {
             _claseModelCreacion = ClaseModel.BuscarPorNombre(selectorClase.SelectedValue.ToString());
-            NuevoPersonajeModel.ClaseModel = _claseModelCreacion;
+            _nuevoPersonajeModel.ClaseModel = _claseModelCreacion;
             _listaHabilidadesClase = _claseModelCreacion.ListaHabilidadesClase;
             SetValuesAtributeBoxes();
             SetDataGridViewHabilidades();
+            txtTamaño.Text = _nuevoPersonajeModel.Tamaño();
+            txtVelocidad.Text = Convert.ToString(_nuevoPersonajeModel.Velocidad());
         }
 
         private void InicializarSelectorClases()
         {
-            selectorClase.DataSource = listaClases;
+            selectorClase.DataSource = _listaClases;
             selectorClase.DisplayMember = "Nombre";
             selectorClase.ValueMember = "Nombre";
             selectorClase.SelectedValue = "";
         }
         private void InicializarSelectorRazas()
         {
-            selectorRaza.DataSource = listaRazas;
+            selectorRaza.DataSource = _listaRazas;
             selectorRaza.DisplayMember = "Nombre";
             selectorRaza.ValueMember = "Nombre";
             selectorRaza.SelectedValue = "";
         }    
         private void EnlazaDataGridViewHabilidades()
         {
-            habilidadesSource.DataSource = listaHabilidades;
+            habilidadesSource.DataSource = _listaHabilidades;
             deClaseColumn.DataPropertyName = "DeClase";
             nombreColumn.DataPropertyName = "Nombre";
             normalColumn.DataPropertyName = "Normal";
@@ -200,23 +210,24 @@ namespace Character_Inventory_Administrator.Vista
 
         private void btnContCreacion_Click(object sender, EventArgs e)
         {
-            NuevoPersonajeModel.Nombre = txtNombre.Text;
-            NuevoPersonajeModel.Jugador = txtJugador.Text;
-            NuevoPersonajeModel.Piel = txtPiel.Text;
-            NuevoPersonajeModel.Pelo = txtPelo.Text;
-            NuevoPersonajeModel.Ojos = txtOjos.Text;
+            _nuevoPersonajeModel.Nombre = txtNombre.Text;
+            _nuevoPersonajeModel.Jugador = txtJugador.Text;
+            _nuevoPersonajeModel.Piel = txtPiel.Text;
+            _nuevoPersonajeModel.Pelo = txtPelo.Text;
+            _nuevoPersonajeModel.Ojos = txtOjos.Text;
 
-            NuevoPersonajeModel.Sexo = selectorSexo.SelectedItem.ToString();
-            NuevoPersonajeModel.Altura = selectorAltura.Value.ToString();
-            NuevoPersonajeModel.Peso = selectorPeso.Value.ToString();
-            NuevoPersonajeModel.Edad = selectorEdad.Value.ToString();
+            _nuevoPersonajeModel.Sexo = selectorSexo.SelectedItem.ToString();
+            _nuevoPersonajeModel.Altura = selectorAltura.Value.ToString();
+            _nuevoPersonajeModel.Peso = selectorPeso.Value.ToString();
+            _nuevoPersonajeModel.Edad = selectorEdad.Value.ToString();
 
-            NuevoPersonajeModel.Vida = (int)selectorVida.Value;
-            NuevoPersonajeModel.Nivel = (int)selectorLvl.Value;
+            _nuevoPersonajeModel.Vida = (int)selectorVida.Value;
+            _nuevoPersonajeModel.Nivel = (int)selectorLvl.Value;
 
-            NuevoPersonajeModel.AtributosModel = _atributosModelCreacion;
-            NuevoPersonajeModel.RazaModel = _razaModelCreacion;
-            NuevoPersonajeModel.ClaseModel = _claseModelCreacion;
+            //ESTO SE SETEA CADA VEZ QUE CAMBIAS ALGO DE ESTOS
+            //_nuevoPersonajeModel.AtributosModel = _atributosModelCreacion;
+            //_nuevoPersonajeModel.RazaModel = _razaModelCreacion;
+            //_nuevoPersonajeModel.ClaseModel = _claseModelCreacion;
 
             Close();
         }
