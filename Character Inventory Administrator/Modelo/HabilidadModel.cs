@@ -1,20 +1,24 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using Character_Inventory_Administrator.Dao;
 
 namespace Character_Inventory_Administrator.Modelo
 {
     public class HabilidadModel
     {
+        private bool _deClase;
         private string _nombre;
         private string _atributoClave;
         private bool _normal;
         private int _rangos;
-        
-        //int modClave;
-        //int modOtro;
+        //private int modClave;
+        //private int modOtro;
 
-        //int mod1;
-        //int mod2;
         
+        public bool DeClase
+        {
+            get { return _deClase; }
+            set { _deClase = value; }
+        }
         public string Nombre
         {
             get { return _nombre; }
@@ -49,6 +53,7 @@ namespace Character_Inventory_Administrator.Modelo
 
         public HabilidadModel()
         {
+            DeClase = false;
             Nombre = "";
             AtributoClave = "";
             Normal = false;
@@ -59,6 +64,7 @@ namespace Character_Inventory_Administrator.Modelo
 
         public HabilidadModel(string nombre, string atributoClave, bool normal)
         {
+            DeClase = false;
             Nombre = nombre;
             AtributoClave = atributoClave;
             Normal = normal;
@@ -98,5 +104,41 @@ namespace Character_Inventory_Administrator.Modelo
         //        }
             
         //}
+
+        //////////////////////////////////////////////////////// METODOS PARA ALMACENAMIENTO CON DAO DE LA CLASE //////////////////////////////////////////
+        static private HabilidadesDAO _datos = new HabilidadesDAO();
+        static private List<HabilidadModel> _listaHabilidades = new List<HabilidadModel>();
+
+        
+        static public HabilidadModel AgregarHabilidad(HabilidadModel nuevaHabilidadModel)
+        {
+            return nuevaHabilidadModel;
+        }
+
+        static public List<HabilidadModel> AgregarListaHabilidades(List<HabilidadModel> nuevaListaHabilidades)
+        {
+            _datos.AgregarArchivo(nuevaListaHabilidades);
+            return nuevaListaHabilidades;
+        }
+
+        static public List<HabilidadModel> DameListaCompHabilidades()
+        {
+            return _datos.DameAll();
+        }
+
+        static public HabilidadModel BuscarPorNombre(string nombre)
+        {
+            _listaHabilidades = _datos.DameAll();
+            foreach (HabilidadModel habilidad in _listaHabilidades)
+            {
+                if (habilidad.Nombre == nombre)
+                {
+                    return habilidad;
+                }
+            }
+            return null;
+        }
+        //////////////////////////////////////////////////////// METODOS PARA ALMACENAMIENTO CON DAO DE LA CLASE //////////////////////////////////////////
+
     }
 }

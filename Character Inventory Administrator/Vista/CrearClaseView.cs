@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Character_Inventory_Administrator.Controlador;
 using Character_Inventory_Administrator.Modelo;
 
 namespace Character_Inventory_Administrator.Vista
@@ -10,18 +9,14 @@ namespace Character_Inventory_Administrator.Vista
     {
         List<ClaseModel> listaClases = new List<ClaseModel>();
         List<HabilidadModel> _listaTodasHabilidades = new List<HabilidadModel>();
-        ClasesController _manejoClasesController = new ClasesController();
-        HabilidadesController _manejoHabilidadesController = new HabilidadesController();
-
+        
         public CrearClaseView()
         {
             InitializeComponent();
-            listaClases = _manejoClasesController.DameListaComp();
+            listaClases = ClaseModel.DameListaCompClases();
             InicializadorBoxClases();
             InicializarGridViewHabilidades();
         }
-
-        
 
         private void btnCargarClase_Click(object sender, EventArgs e)
         {
@@ -32,27 +27,28 @@ namespace Character_Inventory_Administrator.Vista
             {
                 if ((row.Cells[0].Value) != null)
                 {
-                    listaHabilidadesClase.Add(_manejoHabilidadesController.BuscarPorNombre(row.Cells[nombreColumn.Name].Value.ToString()));
+                    HabilidadModel habilidad = HabilidadModel.BuscarPorNombre(row.Cells[nombreColumn.Name].Value.ToString());
+                    habilidad.DeClase = true;
+                    listaHabilidadesClase.Add(habilidad);
                 }
             }
-
-            ClaseModel nuevaClaseModel = new ClaseModel(txtNomClase.Text, modAtributosModel, listaHabilidadesClase);
+            ClaseModel nuevaClaseModel = new ClaseModel(txtNomClase.Text, modAtributosModel, (int)selectorVelocidad.Value, listaHabilidadesClase);
             listaClases.Add(nuevaClaseModel);
-            _manejoClasesController.AgregarListaClases(listaClases);
+            ClaseModel.AgregarListaClases(listaClases);
             MessageBox.Show(@"Clase agregada");
             Close();
         }
 
         private void InicializadorBoxClases()
         {
-            listBoxClases.DataSource = _manejoClasesController.DameListaComp();
+            listBoxClases.DataSource = ClaseModel.DameListaCompClases();
             listBoxClases.DisplayMember = "Nombre";
             listBoxClases.ValueMember = "Nombre";
         }
 
         private void InicializarGridViewHabilidades()
         {
-            _listaTodasHabilidades = _manejoHabilidadesController.DameListaComp();
+            _listaTodasHabilidades = HabilidadModel.DameListaCompHabilidades();
             habilidadesSource.DataSource = _listaTodasHabilidades;
             dataGridViewHabilidades.AutoGenerateColumns = false;
             nombreColumn.DataPropertyName = "Nombre";

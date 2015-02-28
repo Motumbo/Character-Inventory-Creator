@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Character_Inventory_Administrator.Controlador;
-using Character_Inventory_Administrator.Modelo;
-using Character_Inventory_Administrator.Vistas;
+
 
 namespace Character_Inventory_Administrator.Vista
 {
@@ -20,12 +18,7 @@ namespace Character_Inventory_Administrator.Vista
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            PersonajeModel modelo = new PersonajeModel();
-            PersonajesController controlador = new PersonajesController();
             CrearPersonajeView vista = new CrearPersonajeView();
-            modelo.Vista = vista;
-            vista.NuevoPersonajeModel = modelo;
-            controlador.Modelo = modelo;
             vista.ShowDialog();
         }
 
