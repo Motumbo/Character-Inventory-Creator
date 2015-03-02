@@ -7,6 +7,7 @@ namespace Character_Inventory_Administrator.Modelo
     {
         private string _nombre;
         private AtributosModel _modAtributosModel;
+        private int _dadoPuntosVida;
         private int _velocidad;
         private List<HabilidadModel> _listaHabilidadesClase;
         
@@ -21,6 +22,11 @@ namespace Character_Inventory_Administrator.Modelo
             get { return _modAtributosModel; }
             set { _modAtributosModel = value; }
         }
+        public int DadoPuntosVida
+        {
+            get { return _dadoPuntosVida; }
+            set { _dadoPuntosVida = value; }
+        }
         public int Velocidad
         {
             get { return _velocidad; }
@@ -31,19 +37,22 @@ namespace Character_Inventory_Administrator.Modelo
             get { return _listaHabilidadesClase; }
             set { _listaHabilidadesClase = value; }
         }
+
         
         public ClaseModel()
         {
             Nombre = "";
             ModAtributosModel = new AtributosModel();
+            DadoPuntosVida = 0;
             Velocidad = 0;
             ListaHabilidadesClase = new List<HabilidadModel>();
         }
 
-        public ClaseModel(string nombreClase, AtributosModel atribClase, int velocidadClase,List<HabilidadModel> listaHabilidades)
+        public ClaseModel(string nombreClase, AtributosModel atribClase, int dadoPuntosVida, int velocidadClase,List<HabilidadModel> listaHabilidades)
         {
             Nombre = nombreClase;
             ModAtributosModel = atribClase;
+            DadoPuntosVida = dadoPuntosVida;
             Velocidad = velocidadClase;
             ListaHabilidadesClase = listaHabilidades;
         }

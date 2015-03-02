@@ -53,6 +53,9 @@
             this.habilidadesSource = new System.Windows.Forms.BindingSource(this.components);
             this.selectorVelocidad = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.selectorTipoDadoVida = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.selectFuerza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectCarisma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectSabiduria)).BeginInit();
@@ -62,11 +65,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHabilidades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.habilidadesSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectorVelocidad)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.selectorTipoDadoVida)).BeginInit();
             this.SuspendLayout();
             // 
             // selectFuerza
             // 
-            this.selectFuerza.Location = new System.Drawing.Point(83, 70);
+            this.selectFuerza.Location = new System.Drawing.Point(81, 11);
             this.selectFuerza.Minimum = new decimal(new int[] {
             10,
             0,
@@ -79,7 +84,7 @@
             // 
             // selectCarisma
             // 
-            this.selectCarisma.Location = new System.Drawing.Point(83, 180);
+            this.selectCarisma.Location = new System.Drawing.Point(81, 121);
             this.selectCarisma.Minimum = new decimal(new int[] {
             10,
             0,
@@ -92,7 +97,7 @@
             // 
             // selectSabiduria
             // 
-            this.selectSabiduria.Location = new System.Drawing.Point(83, 158);
+            this.selectSabiduria.Location = new System.Drawing.Point(81, 99);
             this.selectSabiduria.Minimum = new decimal(new int[] {
             10,
             0,
@@ -105,7 +110,7 @@
             // 
             // selectInteligencia
             // 
-            this.selectInteligencia.Location = new System.Drawing.Point(83, 136);
+            this.selectInteligencia.Location = new System.Drawing.Point(81, 77);
             this.selectInteligencia.Minimum = new decimal(new int[] {
             10,
             0,
@@ -118,7 +123,7 @@
             // 
             // selectDestreza
             // 
-            this.selectDestreza.Location = new System.Drawing.Point(83, 92);
+            this.selectDestreza.Location = new System.Drawing.Point(81, 33);
             this.selectDestreza.Minimum = new decimal(new int[] {
             10,
             0,
@@ -131,7 +136,7 @@
             // 
             // selectConstitucion
             // 
-            this.selectConstitucion.Location = new System.Drawing.Point(83, 114);
+            this.selectConstitucion.Location = new System.Drawing.Point(81, 55);
             this.selectConstitucion.Minimum = new decimal(new int[] {
             10,
             0,
@@ -145,7 +150,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(12, 182);
+            this.label19.Location = new System.Drawing.Point(10, 123);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(44, 13);
             this.label19.TabIndex = 67;
@@ -154,7 +159,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(12, 160);
+            this.label18.Location = new System.Drawing.Point(10, 101);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(51, 13);
             this.label18.TabIndex = 66;
@@ -163,7 +168,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(12, 138);
+            this.label17.Location = new System.Drawing.Point(10, 79);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(61, 13);
             this.label17.TabIndex = 65;
@@ -172,7 +177,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(12, 116);
+            this.label16.Location = new System.Drawing.Point(10, 57);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(65, 13);
             this.label16.TabIndex = 64;
@@ -181,7 +186,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(12, 94);
+            this.label15.Location = new System.Drawing.Point(10, 35);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(49, 13);
             this.label15.TabIndex = 63;
@@ -190,7 +195,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(12, 72);
+            this.label14.Location = new System.Drawing.Point(10, 13);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(39, 13);
             this.label14.TabIndex = 62;
@@ -225,9 +230,9 @@
             // listBoxClases
             // 
             this.listBoxClases.FormattingEnabled = true;
-            this.listBoxClases.Location = new System.Drawing.Point(152, 70);
+            this.listBoxClases.Location = new System.Drawing.Point(328, 79);
             this.listBoxClases.Name = "listBoxClases";
-            this.listBoxClases.Size = new System.Drawing.Size(120, 134);
+            this.listBoxClases.Size = new System.Drawing.Size(96, 134);
             this.listBoxClases.TabIndex = 74;
             // 
             // dataGridViewHabilidades
@@ -298,27 +303,64 @@
             this.label3.TabIndex = 81;
             this.label3.Text = "Velocidad\r\nAdicional";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.selectFuerza);
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.Controls.Add(this.selectCarisma);
+            this.panel1.Controls.Add(this.selectConstitucion);
+            this.panel1.Controls.Add(this.selectSabiduria);
+            this.panel1.Controls.Add(this.selectDestreza);
+            this.panel1.Controls.Add(this.selectInteligencia);
+            this.panel1.Location = new System.Drawing.Point(12, 64);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(128, 149);
+            this.panel1.TabIndex = 83;
+            // 
+            // selectorTipoDadoVida
+            // 
+            this.selectorTipoDadoVida.Location = new System.Drawing.Point(257, 68);
+            this.selectorTipoDadoVida.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.selectorTipoDadoVida.Name = "selectorTipoDadoVida";
+            this.selectorTipoDadoVida.Size = new System.Drawing.Size(47, 20);
+            this.selectorTipoDadoVida.TabIndex = 87;
+            this.selectorTipoDadoVida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.selectorTipoDadoVida.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(194, 64);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 26);
+            this.label4.TabIndex = 86;
+            this.label4.Text = "Tipo Dado\r\n   de vida";
+            // 
             // CrearClaseView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 501);
+            this.Controls.Add(this.selectorTipoDadoVida);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.selectorVelocidad);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridViewHabilidades);
             this.Controls.Add(this.listBoxClases);
-            this.Controls.Add(this.selectFuerza);
-            this.Controls.Add(this.selectCarisma);
-            this.Controls.Add(this.selectSabiduria);
-            this.Controls.Add(this.selectInteligencia);
-            this.Controls.Add(this.selectDestreza);
-            this.Controls.Add(this.selectConstitucion);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.txtNomClase);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCargarClase);
@@ -333,6 +375,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHabilidades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.habilidadesSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectorVelocidad)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.selectorTipoDadoVida)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,5 +409,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn atributoClaveColumn;
         private System.Windows.Forms.NumericUpDown selectorVelocidad;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.NumericUpDown selectorTipoDadoVida;
+        private System.Windows.Forms.Label label4;
     }
 }

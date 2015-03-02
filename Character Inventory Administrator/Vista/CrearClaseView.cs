@@ -32,7 +32,7 @@ namespace Character_Inventory_Administrator.Vista
                     listaHabilidadesClase.Add(habilidad);
                 }
             }
-            ClaseModel nuevaClaseModel = new ClaseModel(txtNomClase.Text, modAtributosModel, (int)selectorVelocidad.Value, listaHabilidadesClase);
+            ClaseModel nuevaClaseModel = new ClaseModel(txtNomClase.Text, modAtributosModel, (int)selectorTipoDadoVida.Value,(int)selectorVelocidad.Value, listaHabilidadesClase);
             listaClases.Add(nuevaClaseModel);
             ClaseModel.AgregarListaClases(listaClases);
             MessageBox.Show(@"Clase agregada");

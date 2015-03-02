@@ -84,7 +84,8 @@ namespace Character_Inventory_Administrator.Modelo
         //             //                                       Convert.ToInt32(row.Cells[modClaveColumn.Name].Value) +
         //             //                                       Convert.ToInt32(row.Cells[modOtrosColumn.Name].Value));
 
-        //             //total = rangos + modclave + modotros   
+        //             total = rangos + modclave(Fuerza) + modotros   
+
         //                break;
         //            case "Destreza":
                         
@@ -108,7 +109,6 @@ namespace Character_Inventory_Administrator.Modelo
         //////////////////////////////////////////////////////// METODOS PARA ALMACENAMIENTO CON DAO DE LA CLASE //////////////////////////////////////////
         static private HabilidadesDAO _datos = new HabilidadesDAO();
         static private List<HabilidadModel> _listaHabilidades = new List<HabilidadModel>();
-
         
         static public HabilidadModel AgregarHabilidad(HabilidadModel nuevaHabilidadModel)
         {

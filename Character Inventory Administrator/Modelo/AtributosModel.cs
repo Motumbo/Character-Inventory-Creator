@@ -63,15 +63,15 @@ namespace Character_Inventory_Administrator.Modelo
             Carisma = ch;
         }
 
-        public int getAtributosDict() {
-            //TODO: add getters
-            Dictionary<string, attributeGetter> dictionary = new Dictionary<string, attributeGetter>();
-            dictionary.Add("Fuerza", this.Fuerza);
-            dictionary.Add("Destreza", this.Destreza);
-            dictionary.Add("Constitucion", this.Constitucion);
-            dictionary.Add("Inteligencia", this.Inteligencia);
-            dictionary.Add("Sabiduria", this.Sabiduria);
-            dictionary.Add("Carisma", this.Carisma);
-        }
+        //public int getAtributosDict() {
+        //    //TODO: add getters
+        //    Dictionary<string, attributeGetter> dictionary = new Dictionary<string, attributeGetter>();
+        //    dictionary.Add("Fuerza", this.Fuerza);
+        //    dictionary.Add("Destreza", this.Destreza);
+        //    dictionary.Add("Constitucion", this.Constitucion);
+        //    dictionary.Add("Inteligencia", this.Inteligencia);
+        //    dictionary.Add("Sabiduria", this.Sabiduria);
+        //    dictionary.Add("Carisma", this.Carisma);
+        //}
     }
 }

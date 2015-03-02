@@ -43,9 +43,11 @@ namespace Character_Inventory_Administrator.Vista
         {
             SetValuesAtributeBoxes();
             SetDataGridViewHabilidades();
+            txtTamaño.Text = _nuevoPersonajeModel.Tamaño();
+            txtVelocidad.Text = Convert.ToString(_nuevoPersonajeModel.Velocidad());
+            txtDadoVida.Text = Convert.ToString(_nuevoPersonajeModel.ClaseModel.DadoPuntosVida);
         }
-
-
+        
         private void SetearAtributosSeleccionados()
         {
             _atributosModelCreacion = new AtributosModel(
@@ -107,20 +109,14 @@ namespace Character_Inventory_Administrator.Vista
         {
             _razaModelCreacion = RazaModel.BuscarPorNombre(selectorRaza.SelectedValue.ToString());
             _nuevoPersonajeModel.RazaModel = _razaModelCreacion;
-            SetValuesAtributeBoxes();
-            SetDataGridViewHabilidades();
-            txtTamaño.Text = _nuevoPersonajeModel.Tamaño();
-            txtVelocidad.Text = Convert.ToString(_nuevoPersonajeModel.Velocidad());
+            Crear_Personaje_Load(sender, e);
         }
         private void selectorClase_SelectionChangeCommitted(object sender, EventArgs e)
         {
             _claseModelCreacion = ClaseModel.BuscarPorNombre(selectorClase.SelectedValue.ToString());
             _nuevoPersonajeModel.ClaseModel = _claseModelCreacion;
             _listaHabilidadesClase = _claseModelCreacion.ListaHabilidadesClase;
-            SetValuesAtributeBoxes();
-            SetDataGridViewHabilidades();
-            txtTamaño.Text = _nuevoPersonajeModel.Tamaño();
-            txtVelocidad.Text = Convert.ToString(_nuevoPersonajeModel.Velocidad());
+            Crear_Personaje_Load(sender, e);
         }
 
         private void InicializarSelectorClases()
