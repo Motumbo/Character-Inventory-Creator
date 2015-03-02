@@ -2,14 +2,14 @@
 <ArrayOfClaseModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ClaseModel>
     <Nombre>Barbaro</Nombre>
-    <ModAtributosModel>
+    <ModAtributos>
       <Fuerza>2</Fuerza>
       <Destreza>0</Destreza>
       <Constitucion>0</Constitucion>
       <Inteligencia>-1</Inteligencia>
       <Sabiduria>-1</Sabiduria>
       <Carisma>0</Carisma>
-    </ModAtributosModel>
+    </ModAtributos>
     <DadoPuntosVida>0</DadoPuntosVida>
     <Velocidad>10</Velocidad>
     <ListaHabilidadesClase>
@@ -59,14 +59,14 @@
   </ClaseModel>
   <ClaseModel>
     <Nombre>Mago</Nombre>
-    <ModAtributosModel>
+    <ModAtributos>
       <Fuerza>-1</Fuerza>
       <Destreza>0</Destreza>
       <Constitucion>0</Constitucion>
       <Inteligencia>2</Inteligencia>
       <Sabiduria>1</Sabiduria>
       <Carisma>0</Carisma>
-    </ModAtributosModel>
+    </ModAtributos>
     <DadoPuntosVida>4</DadoPuntosVida>
     <Velocidad>0</Velocidad>
     <ListaHabilidadesClase>

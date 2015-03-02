@@ -9,7 +9,7 @@ namespace Character_Inventory_Administrator.Vista
     {
         private readonly PersonajeModel _nuevoPersonajeModel = new PersonajeModel();
 
-        private AtributosModel _atributosModelCreacion = new AtributosModel();
+        private AtributosModel _atributosModelCreacion = new AtributosModel(_nuevoPersonajeModel);
         private RazaModel _razaModelCreacion = new RazaModel();
         private ClaseModel _claseModelCreacion = new ClaseModel();
 
@@ -70,39 +70,39 @@ namespace Character_Inventory_Administrator.Vista
 
         private void SetearModAtributos()
         {
-            txtModFuerza.Text = _nuevoPersonajeModel.ModFuerza().ToString();
-            txtModDestreza.Text = _nuevoPersonajeModel.ModDestreza().ToString();
-            txtModConstitucion.Text = _nuevoPersonajeModel.ModConstitucion().ToString();
-            txtModInteligencia.Text = _nuevoPersonajeModel.ModInteligencia().ToString();
-            txtModSabiduria.Text = _nuevoPersonajeModel.ModSabiduria().ToString();
-            txtModCarisma.Text = _nuevoPersonajeModel.ModCarisma().ToString();
+            txtModFuerza.Text = _nuevoPersonajeModel.AtributosModel.ModFuerza().ToString();
+            txtModDestreza.Text = _nuevoPersonajeModel.AtributosModel.ModDestreza().ToString();
+            txtModConstitucion.Text = _nuevoPersonajeModel.AtributosModel.ModConstitucion().ToString();
+            txtModInteligencia.Text = _nuevoPersonajeModel.AtributosModel.ModInteligencia().ToString();
+            txtModSabiduria.Text = _nuevoPersonajeModel.AtributosModel.ModSabiduria().ToString();
+            txtModCarisma.Text = _nuevoPersonajeModel.AtributosModel.ModCarisma().ToString();
         }
         private void SetearAtributosTotales()
         {
-            txtTotalFuerza.Text = _nuevoPersonajeModel.Fuerza().ToString();
-            txtTotalDestreza.Text = _nuevoPersonajeModel.Destraza().ToString();
-            txtTotalConstitucion.Text = _nuevoPersonajeModel.Constitucion().ToString();
-            txtTotalInteligencia.Text = _nuevoPersonajeModel.Inteligencia().ToString();
-            txtTotalSabiduria.Text = _nuevoPersonajeModel.Sabiduria().ToString();
-            txtTotalCarisma.Text = _nuevoPersonajeModel.Carisma().ToString();
+            txtTotalFuerza.Text = _nuevoPersonajeModel.AtributosModel.Fuerza().ToString();
+            txtTotalDestreza.Text = _nuevoPersonajeModel.AtributosModel.Destreza().ToString();
+            txtTotalConstitucion.Text = _nuevoPersonajeModel.AtributosModel.Constitucion().ToString();
+            txtTotalInteligencia.Text = _nuevoPersonajeModel.AtributosModel.Inteligencia().ToString();
+            txtTotalSabiduria.Text = _nuevoPersonajeModel.AtributosModel.Sabiduria().ToString();
+            txtTotalCarisma.Text = _nuevoPersonajeModel.AtributosModel.Carisma().ToString();
         }
         private void SetearModRaza()
         {
-            txtModRazaFuerza.Text = _razaModelCreacion.ModAtributosModel.Fuerza.ToString();
-            txtModRazaDestreza.Text = _razaModelCreacion.ModAtributosModel.Destreza.ToString();
-            txtModRazaConstitucion.Text = _razaModelCreacion.ModAtributosModel.Constitucion.ToString();
-            txtModRazaInteligencia.Text = _razaModelCreacion.ModAtributosModel.Inteligencia.ToString();
-            txtModRazaSabiduria.Text = _razaModelCreacion.ModAtributosModel.Sabiduria.ToString();
-            txtModRazaCarisma.Text = _razaModelCreacion.ModAtributosModel.Carisma.ToString();
+            txtModRazaFuerza.Text = _razaModelCreacion.ModAtributos.Fuerza.ToString();
+            txtModRazaDestreza.Text = _razaModelCreacion.ModAtributos.Destreza.ToString();
+            txtModRazaConstitucion.Text = _razaModelCreacion.ModAtributos.Constitucion.ToString();
+            txtModRazaInteligencia.Text = _razaModelCreacion.ModAtributos.Inteligencia.ToString();
+            txtModRazaSabiduria.Text = _razaModelCreacion.ModAtributos.Sabiduria.ToString();
+            txtModRazaCarisma.Text = _razaModelCreacion.ModAtributos.Carisma.ToString();
         }
         private void SetearModClase()
         {
-            txtModClaseFuerza.Text = _claseModelCreacion.ModAtributosModel.Fuerza.ToString();
-            txtModClaseDestreza.Text = _claseModelCreacion.ModAtributosModel.Destreza.ToString();
-            txtModClaseConstitucion.Text = _claseModelCreacion.ModAtributosModel.Constitucion.ToString();
-            txtModClaseInteligencia.Text = _claseModelCreacion.ModAtributosModel.Inteligencia.ToString();
-            txtModClaseSabiduria.Text = _claseModelCreacion.ModAtributosModel.Sabiduria.ToString();
-            txtModClaseCarisma.Text = _claseModelCreacion.ModAtributosModel.Carisma.ToString();
+            txtModClaseFuerza.Text = _claseModelCreacion.ModAtributos.Fuerza.ToString();
+            txtModClaseDestreza.Text = _claseModelCreacion.ModAtributos.Destreza.ToString();
+            txtModClaseConstitucion.Text = _claseModelCreacion.ModAtributos.Constitucion.ToString();
+            txtModClaseInteligencia.Text = _claseModelCreacion.ModAtributos.Inteligencia.ToString();
+            txtModClaseSabiduria.Text = _claseModelCreacion.ModAtributos.Sabiduria.ToString();
+            txtModClaseCarisma.Text = _claseModelCreacion.ModAtributos.Carisma.ToString();
         }
 
         private void selectorRaza_SelectionChangeCommitted(object sender, EventArgs e)

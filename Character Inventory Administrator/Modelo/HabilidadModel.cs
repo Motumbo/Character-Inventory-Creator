@@ -3,6 +3,8 @@ using Character_Inventory_Administrator.Dao;
 
 namespace Character_Inventory_Administrator.Modelo
 {
+    delegate int AttributeGetter();
+
     public class HabilidadModel
     {
         private bool _deClase;
@@ -13,7 +15,6 @@ namespace Character_Inventory_Administrator.Modelo
         //private int modClave;
         //private int modOtro;
 
-        
         public bool DeClase
         {
             get { return _deClase; }

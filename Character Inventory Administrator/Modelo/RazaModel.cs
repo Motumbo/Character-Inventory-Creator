@@ -6,7 +6,7 @@ namespace Character_Inventory_Administrator.Modelo
     public class RazaModel
     {
         private string _nombre;
-        private AtributosModel _modAtributosModel;
+        private Atributos _modAtributos;
         private List<HabilidadModel> _listaModHabilidades;
         private string _tamaño;
         private int _velocidad;
@@ -17,10 +17,10 @@ namespace Character_Inventory_Administrator.Modelo
             get { return _nombre; }
             set { _nombre = value; }
         }
-        public AtributosModel ModAtributosModel
+        public Atributos ModAtributos
         {
-            get { return _modAtributosModel; }
-            set { _modAtributosModel = value; }
+            get { return _modAtributos; }
+            set { _modAtributos = value; }
         }
         public List<HabilidadModel> ListaHabilidadesRaza
         {
@@ -42,17 +42,16 @@ namespace Character_Inventory_Administrator.Modelo
 
         public RazaModel()
         {
-            Nombre = "";
-            ModAtributosModel = new AtributosModel();
+            Nombre = "";           
             ListaHabilidadesRaza = new List<HabilidadModel>();
             Tamaño = "";
             Velocidad = 0;
         }
 
-        public RazaModel(string nombreRaza, AtributosModel atribRaza, string tamañoRaza, int velocidadRaza)
+        public RazaModel(string nombreRaza, Atributos atribRaza, string tamañoRaza, int velocidadRaza)
         {
             Nombre = nombreRaza;
-            ModAtributosModel = atribRaza;
+            ModAtributos = atribRaza;
             ListaHabilidadesRaza = null;
             Tamaño = tamañoRaza;
             Velocidad = velocidadRaza;

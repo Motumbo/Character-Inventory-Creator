@@ -98,7 +98,7 @@ namespace Character_Inventory_Administrator.Modelo
             get { return _piel; }
             set { _piel = value; }
         }
-
+      
         public PersonajeModel()
         {
             Nombre = "";
@@ -107,7 +107,7 @@ namespace Character_Inventory_Administrator.Modelo
             Vida = 0;
             RazaModel = new RazaModel();
             ClaseModel = new ClaseModel();
-            AtributosModel = new AtributosModel();
+            AtributosModel = new AtributosModel(this);
             Edad = "";
             Sexo = "";
             Altura = "";
@@ -133,60 +133,6 @@ namespace Character_Inventory_Administrator.Modelo
             Piel = pi;
         }
         ////////////////////////////////////////////////////////////////////////// METODOS DE ATRIBUTOS PRINCIPALES //////////////////////////////////////////
-        public int Fuerza()
-        {
-            return AtributosModel.Fuerza + RazaModel.ModAtributosModel.Fuerza + ClaseModel.ModAtributosModel.Fuerza;
-        }
-        public int ModFuerza()
-        {
-            return (((Fuerza()) - 10)/2);
-        }
-
-        public int Destreza()
-        {
-            return AtributosModel.Destreza + RazaModel.ModAtributosModel.Destreza + ClaseModel.ModAtributosModel.Destreza;
-        }
-        public int ModDestreza()
-        {
-            return (((Destreza()) - 10)/2);
-        }
-
-        public int Constitucion()
-        {
-            return AtributosModel.Constitucion + RazaModel.ModAtributosModel.Constitucion + ClaseModel.ModAtributosModel.Constitucion;
-        }
-        public int ModConstitucion()
-        {
-            return (Constitucion() - 10)/2;
-        }
-
-        public int Inteligencia()
-        {
-            return AtributosModel.Inteligencia + RazaModel.ModAtributosModel.Inteligencia + ClaseModel.ModAtributosModel.Inteligencia;
-        }
-        public int ModInteligencia()
-        {
-            return (Inteligencia() - 10)/2;
-        }
-
-        public int Sabiduria()
-        {
-            return AtributosModel.Sabiduria + RazaModel.ModAtributosModel.Sabiduria + ClaseModel.ModAtributosModel.Sabiduria;
-        }
-        public int ModSabiduria()
-        {
-            return (Sabiduria() - 10)/2;
-        }
-
-        public int Carisma()
-        {
-            return AtributosModel.Carisma + RazaModel.ModAtributosModel.Carisma + ClaseModel.ModAtributosModel.Carisma;
-        }
-        public int ModCarisma()
-        {
-            return (Carisma() - 10)/2;
-        }
-
         public string Tamaño()
         {
             return _razaModel.Tamaño;
