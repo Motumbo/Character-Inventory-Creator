@@ -142,13 +142,13 @@ namespace Character_Inventory_Administrator.Modelo
             return (((Fuerza()) - 10)/2);
         }
 
-        public int Destraza()
+        public int Destreza()
         {
             return AtributosModel.Destreza + RazaModel.ModAtributosModel.Destreza + ClaseModel.ModAtributosModel.Destreza;
         }
         public int ModDestreza()
         {
-            return (((Destraza()) - 10)/2);
+            return (((Destreza()) - 10)/2);
         }
 
         public int Constitucion()
