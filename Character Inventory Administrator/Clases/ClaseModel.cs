@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
-using Character_Inventory_Administrator.Dao;
+using Character_Inventory_Administrator.Habilidades;
+using Character_Inventory_Administrator.Personajes.Atributos;
 
-namespace Character_Inventory_Administrator.Modelo
+namespace Character_Inventory_Administrator.Clases
 {
     public class ClaseModel
     {

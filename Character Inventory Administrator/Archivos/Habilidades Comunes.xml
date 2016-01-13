@@ -308,4 +308,11 @@
     <Normal>true</Normal>
     <Rangos>0</Rangos>
   </HabilidadModel>
+  <HabilidadModel>
+    <DeClase>false</DeClase>
+    <Nombre>Programar</Nombre>
+    <AtributoClave>Sabiduria</AtributoClave>
+    <Normal>false</Normal>
+    <Rangos>0</Rangos>
+  </HabilidadModel>
 </ArrayOfHabilidadModel>

@@ -1,4 +1,4 @@
-﻿namespace Character_Inventory_Administrator.Vista
+﻿namespace Character_Inventory_Administrator.Personajes
 {
     partial class CrearPersonajeView
     {

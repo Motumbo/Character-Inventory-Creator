@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
-using Character_Inventory_Administrator.Modelo;
+using Character_Inventory_Administrator.Dao;
 
-namespace Character_Inventory_Administrator.Dao
+namespace Character_Inventory_Administrator.Clases
 {
     public class ClasesDAO : Interface_DAO<ClaseModel>
     {

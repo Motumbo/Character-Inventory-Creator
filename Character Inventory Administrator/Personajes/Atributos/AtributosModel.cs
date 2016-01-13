@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Character_Inventory_Administrator.Modelo
+﻿namespace Character_Inventory_Administrator.Personajes.Atributos
 {
     delegate int attributeGetter();
     public class AtributosModel

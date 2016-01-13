@@ -10,6 +10,20 @@
       <Sabiduria>0</Sabiduria>
       <Carisma>0</Carisma>
     </ModAtributosModel>
+    <ListaHabilidadesRaza />
+    <Tamaño>Mediano</Tamaño>
+    <Velocidad>30</Velocidad>
+  </RazaModel>
+  <RazaModel>
+    <Nombre>Semi-Orco</Nombre>
+    <ModAtributosModel>
+      <Fuerza>2</Fuerza>
+      <Destreza>0</Destreza>
+      <Constitucion>1</Constitucion>
+      <Inteligencia>-1</Inteligencia>
+      <Sabiduria>0</Sabiduria>
+      <Carisma>-1</Carisma>
+    </ModAtributosModel>
     <Tamaño>Mediano</Tamaño>
     <Velocidad>30</Velocidad>
   </RazaModel>

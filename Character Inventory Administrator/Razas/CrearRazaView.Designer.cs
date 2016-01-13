@@ -1,4 +1,4 @@
-﻿namespace Character_Inventory_Administrator.Vista
+﻿namespace Character_Inventory_Administrator.Razas
 {
     partial class CrearRazaView
     {

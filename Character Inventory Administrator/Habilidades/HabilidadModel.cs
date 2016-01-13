@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Character_Inventory_Administrator.Dao;
 
-namespace Character_Inventory_Administrator.Modelo
+namespace Character_Inventory_Administrator.Habilidades
 {
     public class HabilidadModel
     {

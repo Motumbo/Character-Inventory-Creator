@@ -10,3 +10,15 @@ C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administ
 C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character Inventory Administrator.pdb
 C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character_Inventory_Administrator.Vista.CrearPersonajeView.resources
 C:\Users\Feto\documents\visual studio 2010\Projects\Character Inventory Administrator\Character Inventory Administrator\obj\x86\Debug\Character Inventory Administrator.csprojResolveAssemblyReference.cache
+C:\Dropbox\Programacion\Character-Inventory-Creator\Character Inventory Administrator\obj\x86\Debug\Character_Inventory_Administrator.Clases.CrearClaseView.resources
+C:\Dropbox\Programacion\Character-Inventory-Creator\Character Inventory Administrator\obj\x86\Debug\Character_Inventory_Administrator.Habilidades.CrearHabilidadView.resources
+C:\Dropbox\Programacion\Character-Inventory-Creator\Character Inventory Administrator\obj\x86\Debug\Character_Inventory_Administrator.Inventario.InventarioVista.resources
+C:\Dropbox\Programacion\Character-Inventory-Creator\Character Inventory Administrator\obj\x86\Debug\Character_Inventory_Administrator.Personajes.CrearPersonajeView.resources
+C:\Dropbox\Programacion\Character-Inventory-Creator\Character Inventory Administrator\obj\x86\Debug\Character_Inventory_Administrator.Properties.Resources.resources
+C:\Dropbox\Programacion\Character-Inventory-Creator\Character Inventory Administrator\obj\x86\Debug\Character_Inventory_Administrator.Razas.CrearRazaView.resources
+C:\Dropbox\Programacion\Character-Inventory-Creator\Character Inventory Administrator\obj\x86\Debug\Character_Inventory_Administrator.Vista.Inicio.resources
+C:\Dropbox\Programacion\Character-Inventory-Creator\Character Inventory Administrator\obj\x86\Debug\Character Inventory Administrator.csproj.GenerateResource.Cache
+C:\Dropbox\Programacion\Character-Inventory-Creator\Character Inventory Administrator\bin\Debug\Character Inventory Administrator.exe
+C:\Dropbox\Programacion\Character-Inventory-Creator\Character Inventory Administrator\bin\Debug\Character Inventory Administrator.pdb
+C:\Dropbox\Programacion\Character-Inventory-Creator\Character Inventory Administrator\obj\x86\Debug\Character Inventory Administrator.exe
+C:\Dropbox\Programacion\Character-Inventory-Creator\Character Inventory Administrator\obj\x86\Debug\Character Inventory Administrator.pdb

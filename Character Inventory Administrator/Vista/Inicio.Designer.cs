@@ -33,6 +33,8 @@
             this.btnCrearRaza = new System.Windows.Forms.Button();
             this.btnCrearClase = new System.Windows.Forms.Button();
             this.btnCrearHabilidad = new System.Windows.Forms.Button();
+            this.btnVerInventario = new System.Windows.Forms.Button();
+            this.btnCrearItem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCrearPersonaje
@@ -84,11 +86,33 @@
             this.btnCrearHabilidad.UseVisualStyleBackColor = true;
             this.btnCrearHabilidad.Click += new System.EventHandler(this.btnCrearHabilidad_Click);
             // 
+            // btnVerInventario
+            // 
+            this.btnVerInventario.Location = new System.Drawing.Point(623, 55);
+            this.btnVerInventario.Name = "btnVerInventario";
+            this.btnVerInventario.Size = new System.Drawing.Size(75, 42);
+            this.btnVerInventario.TabIndex = 5;
+            this.btnVerInventario.Text = "Ver Inventario";
+            this.btnVerInventario.UseVisualStyleBackColor = true;
+            this.btnVerInventario.Click += new System.EventHandler(this.btnVerInventario_Click);
+            // 
+            // btnCrearItem
+            // 
+            this.btnCrearItem.Location = new System.Drawing.Point(623, 107);
+            this.btnCrearItem.Name = "btnCrearItem";
+            this.btnCrearItem.Size = new System.Drawing.Size(75, 42);
+            this.btnCrearItem.TabIndex = 6;
+            this.btnCrearItem.Text = "Crear Item";
+            this.btnCrearItem.UseVisualStyleBackColor = true;
+            this.btnCrearItem.Click += new System.EventHandler(this.btnCrearItem_Click);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(773, 286);
+            this.Controls.Add(this.btnCrearItem);
+            this.Controls.Add(this.btnVerInventario);
             this.Controls.Add(this.btnCrearHabilidad);
             this.Controls.Add(this.btnCrearClase);
             this.Controls.Add(this.btnCrearRaza);
@@ -108,5 +132,7 @@
         private System.Windows.Forms.Button btnCrearRaza;
         private System.Windows.Forms.Button btnCrearClase;
         private System.Windows.Forms.Button btnCrearHabilidad;
+        private System.Windows.Forms.Button btnVerInventario;
+        private System.Windows.Forms.Button btnCrearItem;
     }
 }

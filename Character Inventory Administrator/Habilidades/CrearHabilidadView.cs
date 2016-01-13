@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Character_Inventory_Administrator.Modelo;
 
-namespace Character_Inventory_Administrator.Vista
+namespace Character_Inventory_Administrator.Habilidades
 {
     public partial class CrearHabilidadView : Form
     {

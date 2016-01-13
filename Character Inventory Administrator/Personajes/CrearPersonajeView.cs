@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Character_Inventory_Administrator.Modelo;
+using Character_Inventory_Administrator.Clases;
+using Character_Inventory_Administrator.Habilidades;
+using Character_Inventory_Administrator.Personajes.Atributos;
+using Character_Inventory_Administrator.Razas;
 
-namespace Character_Inventory_Administrator.Vista
+namespace Character_Inventory_Administrator.Personajes
 {
     public partial class CrearPersonajeView : Form
     {
@@ -80,7 +83,7 @@ namespace Character_Inventory_Administrator.Vista
         private void SetearAtributosTotales()
         {
             txtTotalFuerza.Text = _nuevoPersonajeModel.Fuerza().ToString();
-            txtTotalDestreza.Text = _nuevoPersonajeModel.Destraza().ToString();
+            txtTotalDestreza.Text = _nuevoPersonajeModel.Destreza().ToString();
             txtTotalConstitucion.Text = _nuevoPersonajeModel.Constitucion().ToString();
             txtTotalInteligencia.Text = _nuevoPersonajeModel.Inteligencia().ToString();
             txtTotalSabiduria.Text = _nuevoPersonajeModel.Sabiduria().ToString();

@@ -1,7 +1,10 @@
 ﻿using System.Collections.Generic;
-using Character_Inventory_Administrator.Dao;
+using Character_Inventory_Administrator.Clases;
+using Character_Inventory_Administrator.Habilidades;
+using Character_Inventory_Administrator.Personajes.Atributos;
+using Character_Inventory_Administrator.Razas;
 
-namespace Character_Inventory_Administrator.Modelo
+namespace Character_Inventory_Administrator.Personajes
 {
     public class PersonajeModel
     {

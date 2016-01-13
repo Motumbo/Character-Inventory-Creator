@@ -1,5 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
+using Character_Inventory_Administrator.Clases;
+using Character_Inventory_Administrator.Habilidades;
+using Character_Inventory_Administrator.Inventario;
+using Character_Inventory_Administrator.Items;
+using Character_Inventory_Administrator.Personajes;
+using Character_Inventory_Administrator.Razas;
 
 
 namespace Character_Inventory_Administrator.Vista
@@ -39,5 +45,20 @@ namespace Character_Inventory_Administrator.Vista
             CrearHabilidadView creadorHabilidadView = new CrearHabilidadView();
             creadorHabilidadView.ShowDialog();
         }
+
+        private void btnVerInventario_Click(object sender, EventArgs e)
+        {
+            InventarioView verInventarioView = new InventarioView();
+            verInventarioView.ShowDialog();
+        }
+
+        private void btnCrearItem_Click(object sender, EventArgs e)
+        {
+            CrearItemView creadorItemView = new CrearItemView();
+            creadorItemView.ShowDialog();
+        }
+
+
+        
     }
 }
