@@ -13,7 +13,8 @@ namespace Character_Inventory_Administrator.Items
 {
     public partial class CrearItemView : Form
     {
-        List<ItemModel> _listaItems = new List<ItemModel>(); 
+        List<ItemModel> _listaItems = new List<ItemModel>();
+        private String imageSourceItem = "";
 
         public CrearItemView()
         {
@@ -30,15 +31,12 @@ namespace Character_Inventory_Administrator.Items
             openFileDialogImagenItem.Title = "Por favor seleccione una imagen para el item";
             openFileDialogImagenItem.InitialDirectory = "c:";
             openFileDialogImagenItem.ShowDialog();
-            pictureBoxImagenItem.ImageLocation = openFileDialogImagenItem.FileName;
-            pictureBoxImagenItem.SizeMode = PictureBoxSizeMode.StretchImage;
+            imageSourceItem = pictureBoxImagenItem.ImageLocation = openFileDialogImagenItem.FileName;
+            pictureBoxImagenItem.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBoxImagenItem.Visible = true;
         }
 
-        private void btnCrearItem_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void selectorTamaño_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -47,22 +45,90 @@ namespace Character_Inventory_Administrator.Items
             {                    
 
                 case "Enorme":
-                    pictureBoxImagenItem.Size = new Size(250, 100);
+                    selectAlturaImagen.Maximum = 160;
+                    selectAlturaImagen.Value = 160;
+                    
+                    selectAnchoImagen.Maximum = 350;
+                    selectAnchoImagen.Value = 350;
+                    
+
+                    lblAlturaImagen.Text = "Altura (Max: 160px)";
+                    lblAnchoImagen.Text = "Ancho (Max: 350px)";
+
+                    pictureBoxImagenItem.Size = new Size(350, 160);
                     break;
                 case "Grande":
-                    pictureBoxImagenItem.Size = new Size(90, 130);
+
+                    selectAlturaImagen.Maximum = 160;
+                    selectAlturaImagen.Value = 160;
+                    
+                    selectAnchoImagen.Maximum = 160;
+                    selectAnchoImagen.Value = 160;
+                    
+
+                    lblAlturaImagen.Text = "Altura (Max: 160px)";
+                    lblAnchoImagen.Text = "Ancho (Max: 160px)";
+
+                    pictureBoxImagenItem.Size = new Size(160, 160);
                     break;
                 case "Mediano":
-                    pictureBoxImagenItem.Size = new Size(146, 72);
+
+                    selectAlturaImagen.Maximum = 80;
+                    selectAlturaImagen.Value = 80;
+
+                    selectAnchoImagen.Maximum = 160;
+                    selectAnchoImagen.Value = 160;
+                    
+
+                    lblAlturaImagen.Text = "Altura (Max: 160px)";
+                    lblAnchoImagen.Text = "Ancho (Max: 80px)";
+
+                    pictureBoxImagenItem.Size = new Size(160, 80);
                     break;
                 case "Pequeño":
-                    pictureBoxImagenItem.Size = new Size(60, 120);
+
+                    selectAlturaImagen.Maximum = 80;    
+                    selectAlturaImagen.Value = 80;
+
+                    selectAnchoImagen.Maximum = 80;
+                    selectAnchoImagen.Value = 80;
+
+                    lblAlturaImagen.Text = "Altura (Max: 80px)";
+                    lblAnchoImagen.Text = "Ancho (Max: 80px)";
+
+                    pictureBoxImagenItem.Size = new Size(80, 80);
                     break;
                 case "Diminuto":
+
+                    selectAlturaImagen.Maximum = 72;
+                    selectAlturaImagen.Value = 72;
+                    
+                    selectAnchoImagen.Maximum = 72;
+                    selectAnchoImagen.Value = 72;
+
+                    lblAlturaImagen.Text = "Altura (Max: 72px)";
+                    lblAnchoImagen.Text = "Ancho (Max: 72px)";
+
                     pictureBoxImagenItem.Size = new Size(72, 72);
                     break;
             }
         }
+
+        private void selectAlturaImagen_ValueChanged(object sender, EventArgs e)
+        {
+            //pictureBoxImagenItem.Height = (int)selectAlturaImagen.Value;
+            if (imageSourceItem != "")
+                pictureBoxImagenItem.Image = ResizeImage(pictureBoxImagenItem.Image, (int)selectAnchoImagen.Value, (int)selectAlturaImagen.Value);
+        }
+
+        private void selectAnchoImagen_ValueChanged(object sender, EventArgs e)
+        {
+            //pictureBoxImagenItem.Width = (int)selectAnchoImagen.Value;
+            if (imageSourceItem != "")
+                pictureBoxImagenItem.Image = ResizeImage(pictureBoxImagenItem.Image, (int)selectAnchoImagen.Value, (int)selectAlturaImagen.Value);
+        }
+
+
 
         public static Bitmap ResizeImage(Image image, int width, int height)
         {
@@ -88,6 +154,12 @@ namespace Character_Inventory_Administrator.Items
 
             return destImage;
         }
+
+        private void btnCrearItem_Click(object sender, EventArgs e)
+        {
+            //ItemModel _nuevoItem = new ItemModel(txtNombreItem.Text, selectorCategoria.SelectedText, selectorTamaño.Text);
+        }
+
 
 
 

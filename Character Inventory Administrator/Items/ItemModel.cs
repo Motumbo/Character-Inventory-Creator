@@ -10,9 +10,11 @@ namespace Character_Inventory_Administrator.Items
     {
         private String _nombre;
         private String _categoria;
-        private String _Tamaño;
+        private String _tamaño;
         private float _peso;
         private String _imagePath;
+        private int _altoImagen;
+        private int _anchoImagen;
         private int _maxStack;
 
         private List<PropiedadesEspecialesModel> _listaPropiedadesEspecialesItem;
@@ -21,18 +23,22 @@ namespace Character_Inventory_Administrator.Items
         {
             Nombre = "";
             Categoria = "";
+            Tamaño = "";
             Peso = 0;
             ImagePath = "";
             MaxStack = 0;
             ListaPropiedadesEspecialesItem = null;
         }
 
-        public ItemModel(String nombre, String categoria, float peso, String imagenPath, int maxStack)
+        public ItemModel(String nombre, String categoria, String tamaño, float peso, String imagenPath, int alto, int ancho, int maxStack)
         {
             Nombre = nombre;
             Categoria = categoria;
+            Tamaño = tamaño;
             Peso = peso;
             ImagePath = imagenPath;
+            AltoImagen = alto;
+            AnchoImagen = ancho;
             MaxStack = maxStack;
             ListaPropiedadesEspecialesItem = null;
         }
@@ -51,8 +57,8 @@ namespace Character_Inventory_Administrator.Items
 
         public string Tamaño
         {
-            get { return _Tamaño; }
-            set { _Tamaño = value; }
+            get { return _tamaño; }
+            set { _tamaño = value; }
         }
 
         public float Peso
@@ -67,6 +73,18 @@ namespace Character_Inventory_Administrator.Items
             set { _imagePath = value; }
         }
 
+        public int AltoImagen
+        {
+            get { return _altoImagen; }
+            set { _altoImagen = value; }
+        }
+
+        public int AnchoImagen
+        {
+            get { return _anchoImagen; }
+            set { _anchoImagen = value; }
+        }
+
         public int MaxStack
         {
             get { return _maxStack; }
@@ -79,6 +97,7 @@ namespace Character_Inventory_Administrator.Items
             set { _listaPropiedadesEspecialesItem = value; }
         }
 
+        
         //////////////////////////////////////////////////////// METODOS PARA ALMACENAMIENTO CON DAO DE LA CLASE //////////////////////////////////////////
         static private ItemDAO _datos = new ItemDAO();
         static private List<ItemModel> _listaItems = new List<ItemModel>();

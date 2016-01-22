@@ -37,7 +37,7 @@
             this.selectorCategoria = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnAgregarPropiedadEspecial = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.selectorPropiedadesEspeciales = new System.Windows.Forms.ComboBox();
             this.listBoxPropiedadesEspecialesItem = new System.Windows.Forms.ListBox();
@@ -50,16 +50,22 @@
             this.btnCargarImagenItem = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.selectorTamaño = new System.Windows.Forms.ComboBox();
+            this.lblAlturaImagen = new System.Windows.Forms.Label();
+            this.lblAnchoImagen = new System.Windows.Forms.Label();
+            this.selectAlturaImagen = new System.Windows.Forms.NumericUpDown();
+            this.selectAnchoImagen = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenItem)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.selectorPeso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectorMaxStack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectAlturaImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectAnchoImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 39);
+            this.label1.Location = new System.Drawing.Point(20, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 0;
@@ -79,19 +85,19 @@
             // 
             this.pictureBoxImagenItem.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBoxImagenItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxImagenItem.BackgroundImage")));
-            this.pictureBoxImagenItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBoxImagenItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxImagenItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxImagenItem.Location = new System.Drawing.Point(876, 41);
+            this.pictureBoxImagenItem.Location = new System.Drawing.Point(821, 95);
             this.pictureBoxImagenItem.Name = "pictureBoxImagenItem";
-            this.pictureBoxImagenItem.Size = new System.Drawing.Size(250, 100);
+            this.pictureBoxImagenItem.Size = new System.Drawing.Size(350, 160);
             this.pictureBoxImagenItem.TabIndex = 2;
             this.pictureBoxImagenItem.TabStop = false;
             // 
             // txtNombreItem
             // 
-            this.txtNombreItem.Location = new System.Drawing.Point(129, 36);
+            this.txtNombreItem.Location = new System.Drawing.Point(101, 14);
             this.txtNombreItem.Name = "txtNombreItem";
-            this.txtNombreItem.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreItem.Size = new System.Drawing.Size(513, 20);
             this.txtNombreItem.TabIndex = 3;
             // 
             // openFileDialogImagenItem
@@ -101,7 +107,7 @@
             // selectorCategoria
             // 
             this.selectorCategoria.FormattingEnabled = true;
-            this.selectorCategoria.Location = new System.Drawing.Point(390, 35);
+            this.selectorCategoria.Location = new System.Drawing.Point(101, 47);
             this.selectorCategoria.Name = "selectorCategoria";
             this.selectorCategoria.Size = new System.Drawing.Size(121, 21);
             this.selectorCategoria.TabIndex = 4;
@@ -109,7 +115,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(309, 38);
+            this.label2.Location = new System.Drawing.Point(20, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 5;
@@ -117,33 +123,28 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnAgregar);
+            this.panel1.Controls.Add(this.btnAgregarPropiedadEspecial);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.selectorPropiedadesEspeciales);
             this.panel1.Controls.Add(this.listBoxPropiedadesEspecialesItem);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.selectorPeso);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.selectorMaxStack);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(12, 120);
+            this.panel1.Location = new System.Drawing.Point(12, 147);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(797, 437);
+            this.panel1.Size = new System.Drawing.Size(797, 410);
             this.panel1.TabIndex = 6;
             // 
-            // btnAgregar
+            // btnAgregarPropiedadEspecial
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(399, 126);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 41);
-            this.btnAgregar.TabIndex = 13;
-            this.btnAgregar.Text = "Agregar Propiedad";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregarPropiedadEspecial.Location = new System.Drawing.Point(407, 19);
+            this.btnAgregarPropiedadEspecial.Name = "btnAgregarPropiedadEspecial";
+            this.btnAgregarPropiedadEspecial.Size = new System.Drawing.Size(75, 41);
+            this.btnAgregarPropiedadEspecial.TabIndex = 13;
+            this.btnAgregarPropiedadEspecial.Text = "Agregar Propiedad";
+            this.btnAgregarPropiedadEspecial.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 121);
+            this.label8.Location = new System.Drawing.Point(3, 3);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(120, 13);
             this.label8.TabIndex = 12;
@@ -158,7 +159,7 @@
             "Mediano",
             "Pequeño",
             "Diminuto"});
-            this.selectorPropiedadesEspeciales.Location = new System.Drawing.Point(7, 137);
+            this.selectorPropiedadesEspeciales.Location = new System.Drawing.Point(3, 19);
             this.selectorPropiedadesEspeciales.Name = "selectorPropiedadesEspeciales";
             this.selectorPropiedadesEspeciales.Size = new System.Drawing.Size(386, 21);
             this.selectorPropiedadesEspeciales.TabIndex = 11;
@@ -174,7 +175,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(373, 66);
+            this.label6.Location = new System.Drawing.Point(347, 81);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(20, 13);
             this.label6.TabIndex = 10;
@@ -188,7 +189,7 @@
             0,
             0,
             196608});
-            this.selectorPeso.Location = new System.Drawing.Point(314, 64);
+            this.selectorPeso.Location = new System.Drawing.Point(288, 79);
             this.selectorPeso.Name = "selectorPeso";
             this.selectorPeso.Size = new System.Drawing.Size(53, 20);
             this.selectorPeso.TabIndex = 9;
@@ -196,7 +197,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(277, 66);
+            this.label5.Location = new System.Drawing.Point(251, 81);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 8;
@@ -204,7 +205,7 @@
             // 
             // selectorMaxStack
             // 
-            this.selectorMaxStack.Location = new System.Drawing.Point(96, 64);
+            this.selectorMaxStack.Location = new System.Drawing.Point(101, 74);
             this.selectorMaxStack.Name = "selectorMaxStack";
             this.selectorMaxStack.Size = new System.Drawing.Size(53, 20);
             this.selectorMaxStack.TabIndex = 7;
@@ -212,7 +213,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 66);
+            this.label4.Location = new System.Drawing.Point(20, 76);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 6;
@@ -240,7 +241,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(309, 68);
+            this.label7.Location = new System.Drawing.Point(251, 50);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 13);
             this.label7.TabIndex = 10;
@@ -255,21 +256,94 @@
             "Mediano",
             "Pequeño",
             "Diminuto"});
-            this.selectorTamaño.Location = new System.Drawing.Point(390, 65);
+            this.selectorTamaño.Location = new System.Drawing.Point(332, 47);
             this.selectorTamaño.Name = "selectorTamaño";
             this.selectorTamaño.Size = new System.Drawing.Size(121, 21);
             this.selectorTamaño.TabIndex = 9;
             this.selectorTamaño.SelectedIndexChanged += new System.EventHandler(this.selectorTamaño_SelectedIndexChanged);
+            // 
+            // lblAlturaImagen
+            // 
+            this.lblAlturaImagen.AutoSize = true;
+            this.lblAlturaImagen.Location = new System.Drawing.Point(870, 55);
+            this.lblAlturaImagen.Name = "lblAlturaImagen";
+            this.lblAlturaImagen.Size = new System.Drawing.Size(34, 13);
+            this.lblAlturaImagen.TabIndex = 11;
+            this.lblAlturaImagen.Text = "Altura";
+            // 
+            // lblAnchoImagen
+            // 
+            this.lblAnchoImagen.AutoSize = true;
+            this.lblAnchoImagen.Location = new System.Drawing.Point(990, 55);
+            this.lblAnchoImagen.Name = "lblAnchoImagen";
+            this.lblAnchoImagen.Size = new System.Drawing.Size(38, 13);
+            this.lblAnchoImagen.TabIndex = 13;
+            this.lblAnchoImagen.Text = "Ancho";
+            // 
+            // selectAlturaImagen
+            // 
+            this.selectAlturaImagen.Location = new System.Drawing.Point(873, 69);
+            this.selectAlturaImagen.Maximum = new decimal(new int[] {
+            160,
+            0,
+            0,
+            0});
+            this.selectAlturaImagen.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.selectAlturaImagen.Name = "selectAlturaImagen";
+            this.selectAlturaImagen.Size = new System.Drawing.Size(54, 20);
+            this.selectAlturaImagen.TabIndex = 15;
+            this.selectAlturaImagen.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.selectAlturaImagen.ValueChanged += new System.EventHandler(this.selectAlturaImagen_ValueChanged);
+            // 
+            // selectAnchoImagen
+            // 
+            this.selectAnchoImagen.Location = new System.Drawing.Point(993, 69);
+            this.selectAnchoImagen.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
+            this.selectAnchoImagen.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.selectAnchoImagen.Name = "selectAnchoImagen";
+            this.selectAnchoImagen.Size = new System.Drawing.Size(54, 20);
+            this.selectAnchoImagen.TabIndex = 16;
+            this.selectAnchoImagen.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.selectAnchoImagen.ValueChanged += new System.EventHandler(this.selectAnchoImagen_ValueChanged);
             // 
             // CrearItemView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1183, 562);
+            this.Controls.Add(this.selectAnchoImagen);
+            this.Controls.Add(this.selectAlturaImagen);
+            this.Controls.Add(this.lblAnchoImagen);
+            this.Controls.Add(this.lblAlturaImagen);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.selectorPeso);
             this.Controls.Add(this.selectorTamaño);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCargarImagenItem);
+            this.Controls.Add(this.selectorMaxStack);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.selectorCategoria);
@@ -285,6 +359,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.selectorPeso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectorMaxStack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectAlturaImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectAnchoImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,7 +387,11 @@
         private System.Windows.Forms.ComboBox selectorTamaño;
         private System.Windows.Forms.ComboBox selectorPropiedadesEspeciales;
         private System.Windows.Forms.ListBox listBoxPropiedadesEspecialesItem;
-        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnAgregarPropiedadEspecial;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblAlturaImagen;
+        private System.Windows.Forms.Label lblAnchoImagen;
+        private System.Windows.Forms.NumericUpDown selectAlturaImagen;
+        private System.Windows.Forms.NumericUpDown selectAnchoImagen;
     }
 }
